@@ -1,0 +1,55 @@
+:root {
+	--max-width: 700px;
+}
+
+.wrapper {
+	background-color: #eee;
+}
+
+h3.sub {
+	font-weight: bold;
+	margin: 20px auto;
+}
+
+.no-border {
+	border: 0 !important;
+	margin-top: 20px;
+}
+
+.objeto {
+	max-width: calc(90vh / 0.9115);
+}
+
+.title-big {
+	padding: 20px;
+	font-size: 24px;
+	margin: 0;
+	min-height: 0;
+	max-width: 100%;
+}
+
+.content-section {
+	border-radius: 0;
+}
+
+a,
+a:visited {
+	text-align: left;
+	text-align-last: left;
+}
+
+@media only screen and (max-width: 600px) {
+	.papo {
+		margin-left: -40px;
+		width: calc(100% + 80px);
+		max-width: none !important;
+	}
+}
+
+.content-text h3 {
+	margin: 40px 0;
+}
+
+.content-link {
+	justify-content: start;
+}

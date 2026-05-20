@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Unidade 3 - Gestão de Planilhas e Documentos</title>
+
+	<meta name="description" content="Unidade 2 da disciplina de Gestão de Planilhas e Documentos da UNIASSELVI" />
+	<meta name="keywords"
+		content="Trilha de aprendizagem, Gestão de Planilhas e Documentos, Uniasselvi, EAD, Ensino Superior, Ciências Humanas, Unidade" />
+
+	<link rel="icon" type="image/png" href="../img/favicon.png" />
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js",
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-MP748JT");
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" />
+	</noscript>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/var_humanas.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/background.css" />
+
+	<script defer src="../js/progressbar.min.js"></script>
+	<script defer src="../js/main.js"></script>
+	<script src="../js/lazysizes.min.js" async></script>
+
+	<style>
+		/* Display Flex */
+
+		.flex-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* Destaque */
+
+		.novo-destaque {
+			background-color: rgb(235, 235, 235);
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+		}
+
+		.destaque-outline {
+			border: solid 2px #2c71dc;
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+		}
+
+		.folha {
+
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+			box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+			border-left: 8px solid #2c71dc;
+			border-radius: 5px;
+		}
+
+		hr {
+			margin: 40px 0px;
+			border-top: 0;
+			border-bottom: solid 1px #2c71dc;
+		}
+
+		/* Título */
+
+		.texto-destaque {
+			background-color: rgb(235, 235, 235);
+			color: black;
+			padding: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		.destaque-pratica {
+			background-color: rgb(242, 242, 242);
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+		}
+
+
+		.titulo-pratica {
+			border-bottom: solid 2px #2c71dc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: 25px;
+			padding-bottom: 5px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+			font-family: var(--title-font);
+			color: #2c71dc
+		}
+
+		.titulo-filled {
+			background-color: #2c71dc;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			font-weight: bold;
+			border-radius: 5px;
+			font-size: 18px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+
+		}
+
+		.titulo-outline {
+			border: solid 2px #2c71dc;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #2c71dc;
+			font-weight: bold;
+			border-radius: 5px;
+			font-size: 18px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		.titulo-destaque {
+			border-bottom: solid 2px #2c71dc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: 18px;
+			padding-bottom: 5px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		/* Imagens */
+
+		.nova-img {
+			height: auto;
+			width: 90%;
+			margin: 40px 0px;
+			border-radius: 10px;
+		}
+
+		.img-shadow {
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			border-radius: 10px;
+		}
+
+		/* Listas */
+
+		ul {
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 20px;
+		}
+
+		ul li::before {
+			color: #2c71dc;
+		}
+
+		ol li::before {
+			color: #2c71dc;
+		}
+
+		.checklist {
+			list-style: none;
+		}
+
+		.checklist li:before {
+			content: "✔";
+			margin-right: 8px;
+		}
+
+		.pointlist {
+			list-style: none;
+		}
+
+		.pointlist li:before {
+			content: "●";
+			margin-right: 8px;
+		}
+
+		.arrowlist {
+			list-style: none;
+		}
+
+		.arrowlist li:before {
+			content: "▸";
+			margin-right: 8px;
+		}
+
+		/* Diagrama */
+
+		.diagrama {
+			width: 100%;
+			height: auto;
+			display: flex;
+			align-items: center;
+			margin: 30px 0px;
+		}
+
+		.diagrama .titulo {
+			width: 20%;
+			height: 80px;
+			padding: 30px;
+			background-color: #2c71dc;
+			font-size: 25px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			border-radius: 10px;
+			background: #ece9e9;
+			text-shadow: 3px 2px 2px #272727;
+			text-align: center;
+			text-align-last: center;
+		}
+
+		.diagrama .conteudo {
+			padding: 15px;
+			width: 80%;
+			height: 90px;
+			background-color: #1e4f97;
+			font-size: 20px;
+			color: rgb(245, 245, 245);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0px 10px 10px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			font-weight: 600;
+			text-align: center;
+			text-align-last: center;
+		}
+
+		.diagrama .conteudo p {
+			line-height: 40px;
+		}
+
+		/* Quadro de Imagem e Texto */
+
+		.quadro {
+			display: flex;
+			align-items: center;
+		}
+
+		.quadro-img {
+			width: 50%;
+		}
+
+		.quadro-texto {
+			width: 50%;
+			margin-left: 30px;
+		}
+
+		/* Tabelas */
+
+		.table-content {
+			height: auto;
+			width: 100%;
+			margin: 30px 0px;
+		}
+
+		table {
+			text-align: center;
+			text-align-last: center;
+			border-collapse: collapse;
+		}
+
+		thead {
+			background-color: #2c71dc;
+			color: #fff;
+		}
+
+		tbody {
+			background-color: rgb(233, 231, 231);
+		}
+
+		th,
+		td {
+			padding: 15px;
+			border: 1px solid #3c3c3c;
+		}
+
+		@media screen and (max-width: 750px) {
+			.table-content {
+				overflow-x: scroll;
+				justify-content: flex-start;
+			}
+
+			.quadro-img {
+				width: 100%;
+			}
+
+			.quadro-texto {
+				width: 100%;
+				margin: 0;
+			}
+
+			.quadro {
+				flex-wrap: wrap;
+			}
+
+			.diagrama .titulo {
+				font-size: 15px;
+				text-align-last: center;
+			}
+
+			.diagrama .conteudo p {
+				line-height: 20px;
+			}
+
+			.diagrama .conteudo {
+				font-size: 13px;
+			}
+		}
+
+		/* Dropdown */
+
+
+		.drop-down {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.drop-content {
+			background-color: rgb(240, 240, 240);
+			padding: 20px;
+			border-radius: 5px;
+			display: none;
+			margin: 10px 0px;
+
+		}
+
+		.show {
+			background-color: rgb(235, 235, 235);
+			padding: 20px;
+			border-radius: 10px;
+			display: block;
+		}
+
+
+		.btn2 {
+			padding: 15px 10px;
+			color: #fff;
+			background-color: #2c71dc;
+			border-radius: 10px;
+			width: 100%;
+			margin: 20px 0px;
+			display: flex;
+			align-self: center;
+			justify-content: center;
+			cursor: pointer;
+			border: 0;
+			font-weight: bold;
+			font-size: 18px;
+
+		}
+
+		.btn2:hover {
+			background-color: #2562bd;
+		}
+
+
+		/*
+	
+	Dropdown HTML
+	
+	
+	
+				  <button class="btn2" onclick="showPrimeiro()">Primeiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="primeiro" class="drop-content">
+	
+	
+					Primeiro conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showSegundo()">Segundo<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="segundo" class="drop-content">
+	
+					Segundo conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showTerceiro()">Terceiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="terceiro" class="drop-content">
+	
+	
+					Terceiro conteúdo aqui
+	
+				</div>
+	
+	
+	Dropdown JS
+	
+	<script>
+	function showPrimeiro() {
+	
+		document.getElementById('primeiro').classList.toggle('show');
+	}
+	
+	function showSegundo() {
+		document.getElementById('segundo').classList.toggle('show');
+	}
+	
+	function showTerceiro() {
+		document.getElementById('terceiro').classList.toggle('show');
+	}
+	
+	function showQuarto() {
+		document.getElementById('quarto').classList.toggle('show');
+	}
+	
+	function showQuinto() {
+		document.getElementById('quinto').classList.toggle('show');
+	}
+	
+	function showSexto() {
+		document.getElementById('sexto').classList.toggle('show');
+	}
+	
+	function showSetimo() {
+		document.getElementById('setimo').classList.toggle('show');
+	}
+	</script>
+	   
+	
+	Diagramas HTML
+	
+	
+	<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #246db6;">
+	
+	
+							<p>
+								TÓPICO 1
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #3a5ba9;">
+	
+							<p>
+								Comportamento Humano e Motivação
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #ee2e6a;">
+	
+	
+							<p>
+								TÓPICO 2
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #db1c4e;">
+	
+							<p>
+								Teorias Motivacionais Aplicadas ao Trabalho
+							</p>
+	
+						</div>
+	
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #f7a31b;">
+	
+	
+							<p>
+								TÓPICO 3
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #f26821;">
+	
+							<p>
+								Cultura e Clima Organizacional e suas Influências na Motivação e no Comportamento
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+	*/
+	</style>
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">638400.000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010053A5CDB753ED6B4E836F94BDD90BC492</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP748JT" height="0" width="0"
+			style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="accessibility-menu">
+		<div id="accessibility-toggle" class="accessibility-item" onclick="toggleAccess()" title="Acessibilidade">
+			<i class="material-icons">accessibility</i>
+		</div>
+		<div id="accessibility-decrease" class="accessibility-item" onclick="decreaseFont()" title="Diminuir a Fonte">
+			<i class="material-icons">text_fields</i>
+		</div>
+		<div id="accessibility-reset" class="accessibility-item" onclick="resetFont()" title="Redefinir a Fonte">
+			<i class="material-icons">title</i>
+		</div>
+		<div id="accessibility-increase" class="accessibility-item" onclick="increaseFont()" title="Aumentar a Fonte">
+			<i class="material-icons">format_size</i>
+		</div>
+	</div>
+
+	<div id="material-menu" class="hidden">
+		<a id="material-menu-livro" class="menu-side-item" title="Livro da Disciplina" target="_blank"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/livro/livro.php?codigo=289838">
+			<img src="../img/ico/livro.svg" alt="Ícone Livro" />
+		</a>
+		<a id="material-menu-gabarito" class="menu-side-item" title="Gabarito"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/gabarito/gabarito.php?codigo=289838"
+			target="_blank">
+			<img src="../img/ico/gabarito.svg" alt="Ícone Gabarito" />
+		</a>
+		<a id="material-menu-videos" class="menu-side-item" title="Vídeos da Disciplina" href="videos.html">
+			<img src="../img/ico/video.svg" alt="Ícone Vídeo" />
+		</a>
+		<a id="material-menu-objetos" class="menu-side-item" title="Objetos de Aprendizagem" href="objetos.html">
+			<img src="../img/ico/objeto.svg" alt="Ícone Objeto" />
+		</a>
+		<div id="material-menu-toggle" class="flex-c clickable" onclick="toggleMaterial()">
+			<i class="material-icons">expand_more</i>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="top-menu-toggle flex-c" onclick="toggleMenu()">
+			<i class="material-icons">menu</i>
+		</div>
+		<div id="topbar">
+			<div class="top-uniwrapper">
+				<a id="topbar-apresentacao" class="top-unidade" href="apresentacao.html">
+					<div class="top-antes"></div>
+					<span>Apresentação</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-u1" class="top-unidade" href="unidade1.html">
+					<div class="top-antes"></div>
+					<span>Unidade 1</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-u2" class="top-unidade" href="unidade2.html">
+					<div class="top-antes"></div>
+					<span>Unidade 2</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-u3" class="top-unidade selected">
+					<div class="top-antes"></div>
+					<span>Unidade 3</span>
+					<div class="top-depois"></div>
+				</a>
+			</div>
+			<div class="topbar-progress"></div>
+		</div>
+
+		<div id="sidebar">
+			<div class="wrapper">
+				<div class="sidebar-logo">
+					<img src="../img/favicon.png" alt="Logo Uniasselvi" />
+				</div>
+
+				<!-- <div class="sidebar-group">
+                    <div id="main-menu-inicio" class="sidebar-item" onclick="redirect('inicio')">
+                        <span>Início</span>
+                    </div>
+                </div> -->
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Minha Trilha</div>
+					<div id="main-menu-apresentacao" class="sidebar-item" onclick="redirect('apresentacao')">
+						Apresentação
+					</div>
+					<div id="main-menu-u1" class="sidebar-item" onclick="redirect('unidade1')">
+						Unidade 1
+					</div>
+					<div id="main-menu-u2" class="sidebar-item" onclick="redirect('unidade2')">
+						<span>Unidade 2</span>
+					</div>
+					<div id="main-menu-u3" class="sidebar-item selected" onclick="redirect('unidade3')">
+						<span>Unidade 3</span>
+						<div class="sidebar-progress"></div>
+					</div>
+				</div>
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Conteúdo Didático</div>
+					<div id="main-menu-livro" class="sidebar-item"
+						onclick="document.querySelector('#material-menu-livro').click()">
+						Livro Didático
+					</div>
+					<div id="main-menu-videos" class="sidebar-item" onclick="redirect('videos')">
+						Vídeos da Disciplina
+					</div>
+					<div id="main-menu-objetos" class="sidebar-item" onclick="redirect('objetos')">
+						Objetos de Aprendizagem
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="wrapper">
+				<div class="title-big bg4"></div>
+
+				<div class="spacer-40"></div>
+
+				<div class="content-section flex-c column">
+					<h1 class="subheader text-center">
+						INTRODUÇÃO À EDIÇÃO DE TEXTOS E PLANILHAS
+					</h1>
+					<h2 class="header header-gradient text-center">
+						Unidade 3
+					</h2>
+
+					<div class="content-text">
+
+						<p>
+							Gostou da primeira e da segunda unidade? Lembre-se de que você poderá acessar todos os
+							materiais
+							sempre que quiser ou tiver alguma dúvida!
+						</p>
+
+						<p><b>Vamos estudar a Unidade 3?</b></p>
+						<p>
+
+							O tema central dessa unidade é a segurança da informação. E você irá entender que as
+							organizações necessitam exercer uma conduta ativa no que diz respeito à segurança da
+							informação.
+							Em função da urgência de se conseguir dados e informações precisas e indispensáveis para a
+							sobrevivência da organização, é essencial que se estabeleçam medidas e procedimentos de
+							segurança da informação, com a finalidade de se precaver e diminuir riscos relacionados às
+							diferentes e numerosas formas de ataques e invasões aos sistemas de informação.
+						</p>
+
+
+						<div class="flex-content">
+
+							<img src="./img/img7.jpg" class="nova-img img-shadow" style="margin-bottom: 0" alt="">
+
+						</div>
+
+						<div class="flex-content">
+							<p><b>Fonte</b>: <a
+									href="https://www.freepik.es/vector-gratis/concepto-cuenta-phishing_7970701.htm#query=Phishing&position=5&from_view=search"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+						</div>
+
+						<p>
+							Veremos também nessa unidade o uso dos editores de texto e planilhas e como esses programas
+							são essenciais para as empresas.
+						</p>
+
+						<div class="flex-content">
+
+							<img src="./img/img2.jpg" class="nova-img" style="margin-bottom: 0" alt="">
+
+						</div>
+
+						<div class="flex-content">
+							<p><b>Fonte</b>: <a
+									href="https://www.freepik.es/vector-gratis/plataforma-o-servicio-linea-escritor-profesional-escritura-autor-novela-publicacion-bestseller-procesador-textos-linea-ilustracion-vector-plano_26477616.htm#query=editor%20texto&position=1&from_view=search"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+						</div>
+
+
+						<div class="dica-leitura">
+							<img src="../img/ico/leia_mais_outline.svg" alt="Dica de Leitura">
+							<p class="titulo-filled">A partir do estudo desta unidade, você será capaz de:</p>
+
+							<ul class="arrowlist">
+								<li>Compreender o que é um processador de texto;</li>
+								<li>Identificar as funcionalidades dos editores de texto;</li>
+								<li>Compreender o que é uma planilha eletrônica;</li>
+								<li>Perceber as funcionalidades das planilhas eletrônicas.</li>
+							</ul>
+
+						</div>
+
+
+						<p class="titulo-destaque">O que é segurança da informação?</p>
+
+						<p>
+							A segurança da informação é um conjunto de medidas orientadas para a defesa dos dados, em
+							especial os dados sensíveis (de clientes, de usuários e das empresas), com o objetivo de
+							garantir que estes encontrem-se disponíveis apenas para aqueles usuários que possuam
+							autorização
+							para acessá-los.
+						</p>
+
+
+						<div class="flex-content">
+
+							<img src="./img/img5.jpg" class="nova-img" style="margin-bottom: 0" alt="">
+
+						</div>
+
+						<div class="flex-content">
+							<p><b>Fonte</b>: <a
+									href="https://www.freepik.es/foto-gratis/dispositivo-protegido-ciberseguridad_22633517.htm"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+						</div>
+
+
+						<p>
+							Além disso, a segurança da informação envolve políticas, processos e metodologias que são
+							utilizadas para possibilitar a disseminação de dados e informações de forma segura e
+							controlada
+							dentro das organizações.
+						</p>
+
+						<p>
+							Com o objetivo de proteger os dados e informações de uma organização, a segurança da
+							informação
+							baseia-se em três fundamentos: confidencialidade, integridade e disponibilidade.
+						</p>
+
+						<br>
+						<p class="titulo-destaque">Importância da segurança da informação</p>
+
+						<p>
+							A importância da segurança da informação para as organizações está não somente no fato de
+							que
+							assegura e resguarda a empresa de ataques externos de intrusos indesejados, igualmente
+							preserva
+							o engajamento interno por parte de todos no que diz respeito às informações.
+						</p>
+
+						<p>
+							Dessa forma, a instituição passa a estar mais segura, além de possuir dados e informações
+							mais
+							precisas e relevantes que auxiliarão a atingir os resultados esperados, além de aperfeiçoar
+							os
+							processos.
+						</p>
+
+						<p>
+							Os dados e informações nos dias atuais são ativos econômicos importantíssimos, sendo também
+							fundamentais no processo de tomada de decisões. Diante disso, investir em segurança é
+							primordial.
+						</p>
+
+						<p>
+							Dessa forma, o investimento em tecnologias que gerem segurança da informação com o objetivo
+							de
+							evitar vazamentos e sequestros de dados e/ou informações é essencial, pois reflete na imagem
+							e
+							credibilidade da organização frente aos seus stakeholders (parceiros internos e externos).
+						</p>
+
+						<br>
+
+						<p class="titulo-destaque">Introdução à edição de textos e planilhas</p>
+
+						<p>
+							Com a informatização das organizações e, por conseguinte, com o surgimento dos sistemas de
+							informações gerenciais, as empresas passaram a ter um controle maior de sua operação.
+							Contudo,
+							algumas empresas não utilizam somente o SI como instrumento para a gestão.
+						</p>
+
+						<p>
+							Isso se deve ao avanço em novas tecnologias, e os computadores são uma ferramenta essencial
+							e
+							útil aos profissionais e organizações.
+						</p>
+
+						<p>
+							Diante disso, as empresas valorizam profissionais que saibam utilizá-los com propriedade,
+							segurança e que consigam usar com destreza os principais programas de edição de texto e
+							planilhas.
+						</p>
+
+						<p>
+							Esses softwares são primordiais na edição e no armazenamento de documentações diversas no
+							campo
+							digital e no controle de dados, facilitando e descomplicando o processamento e a
+							transformação
+							dos dados em informações, auxiliando no controle do fluxo de informações no âmbito
+							empresarial
+							e, como consequência, amplia a capacidade do administrador de tomar decisões.
+						</p>
+
+						<p>
+							Um dos principais softwares empregados nas organizações para a edição de texto é o Word, da
+							empresa Microsoft. Ele é um software completo para a criação de documentos em formato texto.
+							Nele, encontramos tudo o que é preciso para editar textos dos mais básicos aos mais
+							sofisticados, com a inclusão de imagens, links, tabelas, gráficos, entre tantos outros
+							componentes e recursos.
+						</p>
+
+						<p>
+							Já para a edição de planilhas eletrônicas, o programa mais utilizado pelas empresas e
+							profissionais especializados é o Excel, também da Microsoft. As planilhas são empregadas
+							para
+							ordenar e estruturar dados, que após transformação e análise geram informações úteis para as
+							organizações no processo de tomada de decisão.
+						</p>
+
+						<p>
+							Ambas as ferramentas são essenciais para as organizações nos dias atuais. Dessa forma,
+							dominar
+							as principais funções desses programas é condição primordial para uma efetiva
+							operacionalização
+							das empresas e sucesso profissional.
+						</p>
+
+						<div class="video-c flex-c column">
+							<img src="../img/ico/video_c_outline.svg" alt="Video Complementar">
+							Entre os assuntos tratados no tópico, iremos tratar sobre o editor de planilhas eletrônicas
+							Excel e as principais fórmulas utilizadas. Aprofunde seus conhecimentos sobre o tema
+							assistindo
+							ao vídeo. Acesse:
+							<div class="video">
+								<div class="video-large">
+									<iframe class="lazyload" title="Vídeo da Disciplina" width="1280" height="720"
+										data-src="https://www.youtube.com/embed/Ufmem0LjubI?rel=0&amp;showinfo=0&amp;disablekb=1&amp;modestbranding=1&amp;allowfullscreen=1"
+										allowfullscreen="true">
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+						<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+							src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1293585991&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+						<div
+							style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+							<a href="https://soundcloud.com/uniasselvi" title="EdTech NEAD" target="_blank"
+								style="color: #cccccc; text-decoration: none;">EdTech NEAD</a> · <a
+								href="https://soundcloud.com/uniasselvi/gestao-planilhas-documentos-unidade-3"
+								title="Gestão Planilhas Documentos - Unidade 3" target="_blank"
+								style="color: #cccccc; text-decoration: none;">Gestão Planilhas Documentos - Unidade
+								3</a>
+						</div>
+
+						No livro <i>Segurança da informação: Uma visão sistêmica para implantação em organizações</i>, os autores demonstram dentro de um processo de pesquisa sério, o quanto o mundo corporativo está vulnerável em relação a segurança da informação, reafirmando a necessidade de investimentos em prevenção contra ataques virtuais e proteção de dados corporativos.
+
+						<br>
+
+						<p><b>Referências</b></p>
+
+						<p>Pedro Tenório Mascarenhas Neto, Wagne Junqueira Araújo. Segurança da informação: Uma visão sistêmica para implantação em organizações. João Pessoa: Editora da UFPB. 2020. ISBN: 9788523714734</p>
+
+						<div class="dica-leitura">
+							<img src="../img/ico/dica_d_outline.svg" alt="Dica de Leitura">
+							<p>Este é um recurso educacional aberto acessível no link:</p>
+							<a class="content-link flex-c" href="http://www.editora.ufpb.br/sistema/press5/index.php/UFPB/catalog/download/209/75/905-1?inline=1" target="_blank">
+								<i class="material-icons">description</i>
+								<span>Segurança da informação: Uma visão sistêmica para implantação em organizações</span>
+							</a>
+						</div>
+
+						<div class="folha">
+
+							<p class="titulo-pratica">ATIVIDADE PRÁTICA UNIDADE 3</p>
+
+							<p>
+								Antes da disseminação dos computadores, algumas pessoas utilizavam lápis ou caneta e
+								papel
+								para redigir documentos. Outras já possuíam máquinas de escrever, realizando cursos para
+								aprender datilografia, um diferencial para quem procurava emprego. Atualmente, ainda há
+								pessoas que gostam de realizar essas tarefas de forma mais “artesanal”, mas existem
+								programas de edição de texto que auxiliam nessas atividades. O mais popular deles é o
+								Microsoft Word, que possibilita a criação e a edição rápidas de diversos documentos,
+								armazenando o conteúdo produzido em arquivos. Caso seja necessário alterar os textos, o
+								processo será muito mais simples do que o seu equivalente manual. De acordo com Lambert
+								e
+								Cox (2020), o Word pode ser utilizado para:
+							</p>
+
+							<ul class="pointlist">
+								<li>Criar documentos com aspecto profissional;</li>
+								<li>Aplicar estilos e formatações com efeitos de texto e planos de fundo de página;</li>
+								<li>Armazenar configurações definidas pelo usuário;</li>
+								<li>Criar mala direta;</li>
+								<li>Criar tabelas, índices e referências;</li>
+								<li>Compartilhar o mesmo documento com outras pessoas da equipe;</li>
+								<li>Proteger documentos, permitindo alterações em apenas algumas partes do texto.</li>
+							</ul>
+
+							<p>
+								O Word faz parte do pacote Office da Microsoft. Tal pacote agrega outros programas,
+								separados por versões, que possibilitam a edição de diversos tipos de documentos.
+								Atualmente, esses programas são disponibilizados na nuvem, não sendo necessária a sua
+								instalação em um computador.
+							</p>
+
+							<p><b>Descreva a importância do gerenciamento de documentos.</b></p>
+
+						</div>
+
+						<br>
+
+						<p>Confira o vídeo a seguir, onde abordamos a Introdução à Edição de Textos e Planilhas:</p>
+
+					</div>
+					
+						<div class="video">
+							<div class="video-large">
+								<iframe class="lazyload" title="Vídeo da Disciplina" width="1280" height="720"
+									data-src="https://www.youtube.com/embed/p_sRKIFNe5I?rel=0&amp;showinfo=0&amp;disablekb=1&amp;modestbranding=1&amp;allowfullscreen=1"
+									allowfullscreen="true">
+								</iframe>
+							</div>
+						</div>
+					
+					<div class="content-text">
+
+
+					</div>
+
+					<!-- Final do conteúdo -->
+					<br />
+					<h3 class="subheader">BONS ESTUDOS E ATÉ A PRÓXIMA!</h3>
+
+					<br />
+
+					<div class="button-group">
+						<div class="button-wrapper flex-c" title="Ir para Unidade 2">
+							<a id="nav-prev" class="button-next" href="unidade2.html">
+								<i class="material-icons large">chevron_left</i>
+								&emsp;Unidade 2</a>
+						</div>
+
+						<div class="button-wrapper flex-c" title="Voltar ao Topo">
+							<div id="nav-top" class="button-top" onclick="sctop()">
+								<i class="material-icons large">expand_less</i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Footer -->
+
+				<div class="content-footer v22-1">
+					<div class="footer-marca">
+						<img src="../img/favicon.png" alt="" />
+						<span class="footer-marca-texto">UNIASSELVI © Todos os direitos
+							reservados.</span>
+					</div>
+					<div class="footer-links">
+						<a href="https://portal.uniasselvi.com.br/" target="_blank">
+							<img src="../img/favicon.png" alt="" />
+							Acesse o Portal UNIASSELVI</a>
+						<a href="https://ava2.uniasselvi.com.br/">
+							<img src="../img/texto_gio.svg" alt="" />
+
+							Ir para o AVA</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		/* Defer font loading */
+		var giftofspeed = document.createElement("link");
+		giftofspeed.rel = "stylesheet";
+		giftofspeed.href =
+			"https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+		var godefer = document.getElementsByTagName("link")[0];
+		godefer.parentNode.insertBefore(giftofspeed, godefer);
+	</script>
+</body>
+
+</html>

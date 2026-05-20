@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Mudar o titulo aqui com Ctrl + Shift + H -->
+	<!-- SELECIONA SÓ Gestão de Planilhas e Documentos -->
+	<title>Início - Gestão de Planilhas e Documentos</title>
+
+	<meta name="description"
+		content="Introdução à trilha de aprendizagem da disciplina de Gestão de Planilhas e Documentos da UNIASSELVI" />
+	<meta name="keywords"
+		content="Trilha de aprendizagem, Gestão de Planilhas e Documentos, Uniasselvi, EAD, Ensino Superior, Ciências Humanas" />
+
+	<link rel="icon" type="image/png" href="../img/favicon.png" />
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js",
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-MP748JT");
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" />
+	</noscript>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/var_humanas.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/background.css" />
+
+	<script defer src="../js/progressbar.min.js"></script>
+	<script defer src="../js/main.js"></script>
+
+	<style>
+		/* Display Flex */
+
+		.flex-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* Destaque */
+
+		.novo-destaque {
+			background-color: rgb(235, 235, 235);
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+		}
+
+		.destaque-outline {
+			border: solid 2px #2c71dc;
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+		}
+
+		.folha {
+
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+			box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+			border-left: 8px solid #2c71dc;
+			border-radius: 5px;
+		}
+
+		hr {
+			margin: 40px 0px;
+			border-top: 0;
+			border-bottom: solid 1px #2c71dc;
+		}
+
+		/* Título */
+
+		.texto-destaque {
+			background-color: rgb(235, 235, 235);
+			color: black;
+			padding: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		.titulo-filled {
+			background-color: #2c71dc;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			font-weight: bold;
+			border-radius: 5px;
+			font-size: 18px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+
+		}
+
+		.titulo-outline {
+			border: solid 2px #2c71dc;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #2c71dc;
+			font-weight: bold;
+			border-radius: 5px;
+			font-size: 18px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		.titulo-destaque {
+			border-bottom: solid 2px #2c71dc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: 18px;
+			padding-bottom: 5px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		/* Imagens */
+
+		.nova-img {
+			height: auto;
+			width: 90%;
+			margin: 40px 0px;
+			border-radius: 10px;
+		}
+
+		.img-shadow {
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			border-radius: 10px;
+		}
+
+		/* Listas */
+
+		ul {
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 20px;
+		}
+
+		ul li::before {
+			color: #2c71dc;
+		}
+
+		ol li::before {
+			color: #2c71dc;
+		}
+
+		.checklist {
+			list-style: none;
+		}
+
+		.checklist li:before {
+			content: "✔";
+			margin-right: 8px;
+		}
+
+		.pointlist {
+			list-style: none;
+		}
+
+		.pointlist li:before {
+			content: "●";
+			margin-right: 8px;
+		}
+
+		.arrowlist {
+			list-style: none;
+		}
+
+		.arrowlist li:before {
+			content: "▸";
+			margin-right: 8px;
+		}
+
+		/* Diagrama */
+
+		.diagrama {
+			width: 100%;
+			height: auto;
+			display: flex;
+			align-items: center;
+			margin: 30px 0px;
+		}
+
+		.diagrama .titulo {
+			width: 20%;
+			height: 80px;
+			padding: 30px;
+			background-color: #2c71dc;
+			font-size: 25px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			border-radius: 10px;
+			background: #ece9e9;
+			text-shadow: 3px 2px 2px #272727;
+			text-align: center;
+			text-align-last: center;
+		}
+
+		.diagrama .conteudo {
+			padding: 15px;
+			width: 80%;
+			height: 90px;
+			background-color: #1e4f97;
+			font-size: 20px;
+			color: rgb(245, 245, 245);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0px 10px 10px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			font-weight: 600;
+			text-align: center;
+			text-align-last: center;
+		}
+
+		.diagrama .conteudo p {
+			line-height: 40px;
+		}
+
+		/* Quadro de Imagem e Texto */
+
+		.quadro {
+			display: flex;
+			align-items: center;
+		}
+
+		.quadro-img {
+			width: 50%;
+		}
+
+		.quadro-texto {
+			width: 50%;
+			margin-left: 30px;
+		}
+
+		/* Tabelas */
+
+		.table-content {
+			height: auto;
+			width: 100%;
+			margin: 30px 0px;
+		}
+
+		table {
+			text-align: center;
+			text-align-last: center;
+			border-collapse: collapse;
+		}
+
+		thead {
+			background-color: #2c71dc;
+			color: #fff;
+		}
+
+		tbody {
+			background-color: rgb(233, 231, 231);
+		}
+
+		th,
+		td {
+			padding: 15px;
+			border: 1px solid #3c3c3c;
+		}
+
+		@media screen and (max-width: 750px) {
+			.table-content {
+				overflow-x: scroll;
+				justify-content: flex-start;
+			}
+
+			.quadro-img {
+				width: 100%;
+			}
+
+			.quadro-texto {
+				width: 100%;
+				margin: 0;
+			}
+
+			.quadro {
+				flex-wrap: wrap;
+			}
+
+			.diagrama .titulo {
+				font-size: 15px;
+				text-align-last: center;
+			}
+
+			.diagrama .conteudo p {
+				line-height: 20px;
+			}
+
+			.diagrama .conteudo {
+				font-size: 13px;
+			}
+		}
+
+		/* Dropdown */
+
+
+		.drop-down {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.drop-content {
+			background-color: rgb(240, 240, 240);
+			padding: 20px;
+			border-radius: 5px;
+			display: none;
+			margin: 10px 0px;
+
+		}
+
+		.show {
+			background-color: rgb(235, 235, 235);
+			padding: 20px;
+			border-radius: 10px;
+			display: block;
+		}
+
+
+		.btn2 {
+			padding: 15px 10px;
+			color: #fff;
+			background-color: #2c71dc;
+			border-radius: 10px;
+			width: 100%;
+			margin: 20px 0px;
+			display: flex;
+			align-self: center;
+			justify-content: center;
+			cursor: pointer;
+			border: 0;
+			font-weight: bold;
+			font-size: 18px;
+
+		}
+
+		.btn2:hover {
+			background-color: #2562bd;
+		}
+
+
+		/*
+	
+	Dropdown HTML
+	
+	
+	
+				  <button class="btn2" onclick="showPrimeiro()">Primeiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="primeiro" class="drop-content">
+	
+	
+					Primeiro conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showSegundo()">Segundo<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="segundo" class="drop-content">
+	
+					Segundo conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showTerceiro()">Terceiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="terceiro" class="drop-content">
+	
+	
+					Terceiro conteúdo aqui
+	
+				</div>
+	
+	
+	Dropdown JS
+	
+	<script>
+	function showPrimeiro() {
+	
+		document.getElementById('primeiro').classList.toggle('show');
+	}
+	
+	function showSegundo() {
+		document.getElementById('segundo').classList.toggle('show');
+	}
+	
+	function showTerceiro() {
+		document.getElementById('terceiro').classList.toggle('show');
+	}
+	
+	function showQuarto() {
+		document.getElementById('quarto').classList.toggle('show');
+	}
+	
+	function showQuinto() {
+		document.getElementById('quinto').classList.toggle('show');
+	}
+	
+	function showSexto() {
+		document.getElementById('sexto').classList.toggle('show');
+	}
+	
+	function showSetimo() {
+		document.getElementById('setimo').classList.toggle('show');
+	}
+	</script>
+	   
+	
+	Diagramas HTML
+	
+	
+	<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #246db6;">
+	
+	
+							<p>
+								TÓPICO 1
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #3a5ba9;">
+	
+							<p>
+								Comportamento Humano e Motivação
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #ee2e6a;">
+	
+	
+							<p>
+								TÓPICO 2
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #db1c4e;">
+	
+							<p>
+								Teorias Motivacionais Aplicadas ao Trabalho
+							</p>
+	
+						</div>
+	
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #f7a31b;">
+	
+	
+							<p>
+								TÓPICO 3
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #f26821;">
+	
+							<p>
+								Cultura e Clima Organizacional e suas Influências na Motivação e no Comportamento
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+	*/
+	</style>
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">637600.000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010053A5CDB753ED6B4E836F94BDD90BC492</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP748JT" height="0" width="0"
+			style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="accessibility-menu">
+		<div id="accessibility-toggle" class="accessibility-item" onclick="toggleAccess()" title="Acessibilidade">
+			<i class="material-icons">accessibility</i>
+		</div>
+		<div id="accessibility-decrease" class="accessibility-item" onclick="decreaseFont()" title="Diminuir a Fonte">
+			<i class="material-icons">text_fields</i>
+		</div>
+		<div id="accessibility-reset" class="accessibility-item" onclick="resetFont()" title="Redefinir a Fonte">
+			<i class="material-icons">title</i>
+		</div>
+		<div id="accessibility-increase" class="accessibility-item" onclick="increaseFont()" title="Aumentar a Fonte">
+			<i class="material-icons">format_size</i>
+		</div>
+	</div>
+
+	<div id="material-menu" class="hidden">
+		<!-- Mudar o código do livro com Ctrl + Shift + H, esse código pega do gioconda -->
+		<a id="material-menu-livro" class="menu-side-item" title="Livro da Disciplina" target="_blank"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/livro/livro.php?codigo=289838">
+			<img src="../img/ico/livro.svg" alt="Ícone Livro" />
+		</a>
+		<a id="material-menu-gabarito" class="menu-side-item" title="Gabarito"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/gabarito/gabarito.php?codigo=289838"
+			target="_blank">
+			<img src="../img/ico/gabarito.svg" alt="Ícone Gabarito" />
+		</a>
+		<a id="material-menu-videos" class="menu-side-item" title="Vídeos da Disciplina" href="videos.html">
+			<img src="../img/ico/video.svg" alt="Ícone Vídeo" />
+		</a>
+		<a id="material-menu-objetos" class="menu-side-item" title="Objetos de Aprendizagem" href="objetos.html">
+			<img src="../img/ico/objeto.svg" alt="Ícone Objeto" />
+		</a>
+		<div id="material-menu-toggle" class="flex-c clickable" onclick="toggleMaterial()">
+			<i class="material-icons">expand_more</i>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="top-menu-toggle flex-c" onclick="toggleMenu()">
+			<i class="material-icons">menu</i>
+		</div>
+
+		<div id="topbar">
+			<div class="top-uniwrapper">
+				<a id="topbar-inicio" class="top-unidade selected">
+					<div class="top-antes"></div>
+					<span>Início</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-livro" class="top-unidade"
+					onclick="document.querySelector('#material-menu-livro').click()">
+					<div class="top-antes"></div>
+					<span>Livro Didático</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-videos" class="top-unidade" href="videos.html">
+					<div class="top-antes"></div>
+					<span>Vídeos da Disciplina</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-objetos" class="top-unidade" href="objetos.html">
+					<div class="top-antes"></div>
+					<span>Objetos de Aprendizagem</span>
+					<div class="top-depois"></div>
+				</a>
+			</div>
+			<div class="topbar-progress"></div>
+		</div>
+
+		<div id="sidebar">
+			<div class="wrapper">
+				<div class="sidebar-logo">
+					<img src="../img/favicon.png" alt="Logo Uniasselvi" />
+				</div>
+
+				<div class="sidebar-group hidden">
+					<div class="sidebar-search">
+						<input type="text" placeholder="pesquisar" class="sidebar-input" />
+						<i class="material-icons flex-c">search</i>
+					</div>
+				</div>
+
+				<div class="sidebar-group">
+					<div id="main-menu-inicio" class="sidebar-item selected" onclick="redirect('inicio')">
+						<span>Início</span>
+						<div class="sidebar-progress"></div>
+					</div>
+				</div>
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Minha Trilha</div>
+
+					<div id="main-menu-apresentacao" class="sidebar-item" onclick="redirect('apresentacao')">
+						Apresentação
+					</div>
+
+					<div id="main-menu-u1" class="sidebar-item" onclick="redirect('unidade1')">
+						Unidade 1
+					</div>
+
+					<div id="main-menu-u2" class="sidebar-item" onclick="redirect('unidade2')">
+						<span>Unidade 2</span>
+					</div>
+
+					<div id="main-menu-u3" class="sidebar-item" onclick="redirect('unidade3')">
+						Unidade 3
+					</div>
+				</div>
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Conteúdo Didático</div>
+
+					<div id="main-menu-livro" class="sidebar-item"
+						onclick="document.querySelector('#material-menu-livro').click()">
+						Livro Didático
+					</div>
+
+					<div id="main-menu-videos" class="sidebar-item" onclick="redirect('videos')">
+						Vídeos da Disciplina
+					</div>
+
+					<div id="main-menu-objetos" class="sidebar-item" onclick="redirect('objetos')">
+						Objetos de Aprendizagem
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="wrapper">
+				<h1 class="title-big flex-c text-white bg0">
+					Gestão de Planilhas e Documentos
+				</h1>
+
+				<div class="content-section no-shadow">
+					<h2 class="header header-gradient text-center">
+						Bem-vindo
+					</h2>
+					<div class="subheader text-center" style="margin-bottom: 40px">
+						À TRILHA DE APRENDIZAGEM
+					</div>
+					<div class="content-text text-center">
+						<p>
+							Apresentamos a você a trilha de aprendizagem da
+							disciplina de Gestão de Planilhas e Documentos.<br /><br />
+							Ela corresponde a um “caminho virtual de
+							aprendizagem”, capaz de promover e desenvolver
+							competências no que concerne ao conhecimento, à
+							habilidade, à atitude, à interação e à autonomia
+							de seus estudos. <br /><br />Esta trilha de
+							aprendizagem está dividida em três unidades de
+							estudos e apresentação da disciplina, conforme
+							seu livro didático. São elas:
+						</p>
+					</div>
+				</div>
+
+				<!-- UNIDADES -->
+
+				<div class="content-unidade blue-gradient-0" onclick="redirect('apresentacao')">
+					<div class="unidade-desc">
+						<h2 class="unidade-numero">Apresentação</h2>
+					</div>
+					<div class="unidade-go">
+						<i class="material-icons icon-large">chevron_right</i>
+					</div>
+				</div>
+
+				<!-- Mudar o nome das unidades - O nome você pega no sumário do livro -->
+				<div class="content-unidade blue-gradient-1" onclick="redirect('unidade1')">
+					<div class="unidade-desc">
+						<h2 class="unidade-numero">Unidade 1</h2>
+						<div class="unidade-nome">
+							ELABORAÇÃO, GESTÃO DE DOCUMENTOS E INFORMAÇÃO
+						</div>
+					</div>
+					<div class="unidade-go">
+						<i class="material-icons icon-large">chevron_right</i>
+					</div>
+				</div>
+
+				<div class="content-unidade blue-gradient-2" onclick="redirect('unidade2')">
+					<div class="unidade-desc">
+						<h2 class="unidade-numero">Unidade 2</h2>
+						<div class="unidade-nome">
+							INTRODUÇÃO AOS SISTEMAS DE INFORMAÇÃO
+						</div>
+					</div>
+					<div class="unidade-go">
+						<i class="material-icons icon-large">chevron_right</i>
+					</div>
+				</div>
+
+				<div class="content-unidade blue-gradient-3" onclick="redirect('unidade3')">
+					<div class="unidade-desc">
+						<h2 class="unidade-numero">Unidade 3</h2>
+						<div class="unidade-nome">
+							INTRODUÇÃO À EDIÇÃO DE TEXTOS E PLANILHAS
+						</div>
+					</div>
+					<div class="unidade-go">
+						<i class="material-icons icon-large">chevron_right</i>
+					</div>
+				</div>
+
+				<!-- MATERIAIS COMPLEMENTARES -->
+
+				<div class="content-wide bg-white">
+					<div id="material-intro" class="content-text" style="font-size: 1.2em; font-family: Montserrat">
+						<span>Conheça os materiais complementares que poderão
+							estar disponíveis ao longo da sua trilha:</span>
+					</div>
+				</div>
+
+				<div class="content-wide bg-light">
+					<h3 id="div-didatico" class="subheader" style="color: black; text-align: center">
+						MATERIAL DIDÁTICO
+					</h3>
+
+					<div class="content-text material-desc" style="margin-bottom: 40px">
+						<span>Materiais desenvolvidos pela UNIASSELVI que são
+							essenciais para a disciplina</span>
+					</div>
+
+					<div class="itens-essenciais">
+						<div id="div-livro" class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/livro.svg" alt="Ícone Livro" />
+							</div>
+							<div class="essencial-nome">Livro Didático</div>
+							<div class="essencial-desc">
+								Material-base para seu autoestudo da
+								disciplina.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/gabarito.svg" alt="Ícone Gabarito" />
+							</div>
+							<div class="essencial-nome">Gabarito</div>
+							<div class="essencial-desc">
+								Resolução das autoatividades do livro
+								didático.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/video.svg" alt="Ícone Vídeo Uniasselvi" />
+							</div>
+							<div class="essencial-nome">
+								Vídeo da Disciplina
+							</div>
+							<div class="essencial-desc">
+								Vídeo com orientações, explicações,
+								conteúdos e autoatividades.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/objeto.svg" alt="Ícone Objeto" />
+							</div>
+							<div class="essencial-nome">
+								Objeto de Aprendizagem
+							</div>
+							<div class="essencial-desc">
+								Recurso interativo que complementa seus
+								estudos na disciplina.
+							</div>
+						</div>
+					</div>
+
+					<h3 class="subheader" style="color: black; text-align: center">
+						ATIVIDADES COMPLEMENTARES
+					</h3>
+
+					<div class="content-text material-desc" style="margin-bottom: 40px">
+						<span>Espaço para aprimorar seu conhecimento</span>
+					</div>
+
+					<div class="itens-essenciais">
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/exercicio.svg" alt="Ícone Exercícios" />
+							</div>
+							<div class="essencial-nome">Simulado</div>
+							<div class="essencial-desc">
+								Exercícios para treinar o seu conhecimento.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/forum.svg" alt="Ícone Fórum" />
+							</div>
+							<div class="essencial-nome">Fórum</div>
+							<div class="essencial-desc">
+								Espaço para promover a discussão de temas
+								relacionados à disciplina.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/enquete.svg" alt="Ícone Enquete" />
+							</div>
+							<div class="essencial-nome">Enquete</div>
+							<div class="essencial-desc">
+								Momento em que você manifesta suas
+								preferências, aptidões e opiniões sobre
+								determinado assunto.
+							</div>
+						</div>
+					</div>
+
+					<h3 class="subheader" style="color: black; text-align: center">
+						MATERIAL DE APOIO
+					</h3>
+
+					<div class="content-text material-desc" style="margin-bottom: 40px">
+						<span>Conteúdo complementar para enriquecimento do
+							saber</span>
+					</div>
+
+					<div class="itens-essenciais">
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/recurso_i.svg" alt="Ícone Recurso Interativo" />
+							</div>
+							<div class="essencial-nome">
+								Conteúdo Interativo
+							</div>
+							<div class="essencial-desc">
+								Recursos como animações, simulações, jogos,
+								realidade virtual, desafios, entre outros.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/video_c.svg" alt="Ícone Vídeo Complementar" />
+							</div>
+							<div class="essencial-nome">
+								Vídeo Complementar
+							</div>
+							<div class="essencial-desc">
+								Vídeo com curiosidades, novas informações
+								e/ou exemplos práticos relacionados à
+								disciplina.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/dica_d.svg" alt="Ícone Dica de Leitura" />
+							</div>
+							<div class="essencial-nome">
+								Dicas de leitura
+							</div>
+							<div class="essencial-desc">
+								Complemente seus estudos na disciplina com
+								leituras, artigos científicos e outras
+								bibliografias sugeridas.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/leia_mais.svg" alt="Ícone Leia Mais" />
+							</div>
+							<div class="essencial-nome">Saiba mais</div>
+							<div class="essencial-desc">
+								Amplie seus conhecimentos acessando as
+								sugestões de ambientes, sites, bibliotecas e
+								materiais extras.
+							</div>
+						</div>
+
+						<div class="item-essencial">
+							<div class="essencial-icone">
+								<img src="../img/ico/modelo.svg" alt="Ícone Modelo" />
+							</div>
+							<div class="essencial-nome">Documentos</div>
+							<div class="essencial-desc">
+								Modelos de documentos que você utilizará na
+								disciplina.
+							</div>
+						</div>
+					</div>
+
+					<div class="subheader" style="margin-bottom: -20px; text-align: center">
+						PREPARADO PARA INICIAR SEUS ESTUDOS?
+					</div>
+
+					<div class="content-text margin-top" style="margin-bottom: 30px">
+						<br /><br />Agora que você já se familiarizou com a
+						sua trilha de aprendizagem, clique em avançar para
+						ir para a apresentação da sua disciplina.
+					</div>
+
+					<div class="button-group">
+						<div class="button-wrapper flex-c" title="Voltar ao Topo">
+							<div class="button-top" onclick="sctop()">
+								<i class="material-icons large">expand_less</i>
+							</div>
+						</div>
+						<div class="button-wrapper flex-c" title="Ir para Apresentação">
+							<a class="button-next" href="apresentacao.html">Avançar&emsp;<i
+									class="material-icons large">chevron_right</i></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer -->
+
+				<div class="content-footer v22-1">
+					<div class="footer-marca">
+						<img src="../img/favicon.png" alt="" />
+						<span class="footer-marca-texto">UNIASSELVI © Todos os direitos
+							reservados.</span>
+					</div>
+					<div class="footer-links">
+						<a href="https://portal.uniasselvi.com.br/" target="_blank">
+							<img src="../img/favicon.png" alt="" />
+							Acesse o Portal UNIASSELVI</a>
+						<a href="https://ava2.uniasselvi.com.br/">
+							<img src="../img/texto_gio.svg" alt="" />
+
+							Ir para o AVA</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		/* Defer font loading */
+		var giftofspeed = document.createElement("link");
+		giftofspeed.rel = "stylesheet";
+		giftofspeed.href =
+			"https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+		var godefer = document.getElementsByTagName("link")[0];
+		godefer.parentNode.insertBefore(giftofspeed, godefer);
+	</script>
+</body>
+
+</html>

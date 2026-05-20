@@ -1,0 +1,77 @@
+/* popper */
+.hint {
+	background: var(--uniasselvi-dark);
+	box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+	color: var(--uniasselvi-light);
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 1em;
+	display: none;
+	z-index: 10;
+	position: relative;
+	max-width: 280px;
+}
+
+.hint[data-show] {
+	display: block;
+}
+
+.hint p {
+	margin: 0.8em 0;
+	line-height: 1.4;
+	text-underline-position: under;
+	text-align: left;
+	text-align-last: left;
+	font-weight: normal;
+}
+
+.hint a {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+#arrow,
+#arrow::before {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	z-index: -1;
+}
+
+#arrow::before {
+	content: "";
+	transform: rotate(45deg);
+	background: var(--uniasselvi-dark);
+}
+
+.hint[data-popper-placement^="top"] > #arrow {
+	bottom: -4px;
+}
+
+.hint[data-popper-placement^="bottom"] > #arrow {
+	top: -4px;
+}
+
+.hint[data-popper-placement^="left"] > #arrow {
+	right: -4px;
+}
+
+.hint[data-popper-placement^="right"] > #arrow {
+	left: -4px;
+}
+
+.capsula-pop {
+	display: inline-flex;
+	align-items: center;
+	cursor: help;
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	text-decoration: underline;
+	text-decoration-color: var(--uniasselvi-accent);
+	text-underline-position: under;
+	border-radius: 4px;
+	padding: 0 4px;
+}
+
+.capsula-pop:visited {
+	text-decoration-color: var(--uniasselvi-accent);
+}

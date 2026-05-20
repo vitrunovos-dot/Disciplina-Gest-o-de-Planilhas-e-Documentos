@@ -1,0 +1,84 @@
+/*----- variáveis -----*/
+
+:root {
+  /*-- fonts --*/
+  --title-font: "neo-sans", "Montserrat", sans-serif;
+
+  --unidade-numero-font: "neo-sans", "Montserrat", sans-serif;
+  --unidade-nome-font: "neo-sans", "Montserrat", sans-serif;
+
+  --itemessencial-font: "neo-sans", "Montserrat", sans-serif;
+
+  --header-font: "neo-sans", "Montserrat", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+
+  /*-- colors --*/
+  --uniasselvi-black: #000000;
+  --uniasselvi-grey-dark: #313131;
+  --uniasselvi-dark: #333333;
+  --uniasselvi-grey: #595959;
+  --uniasselvi-light: #fcfcfc;
+  --uniasselvi-white: #ffffff;
+  --uniasselvi-cyan: #00aea9;
+  --uniasselvi-orange: #fcaf17;
+  --uniasselvi-yellow: #ffdd00;
+
+  --page-background: var(--uniasselvi-white);
+  --section-background: var(--uniasselvi-light);
+
+  --font-color: var(--uniasselvi-dark);
+
+  --uniasselvi-a1: #23dce4;
+  --uniasselvi-a2: #25aeee;
+  --uniasselvi-accent: #eead2d;
+  --uniasselvi-a3: #455aee;
+  --uniasselvi-a4: #5136e4;
+
+  --gradient-yellow: linear-gradient(to bottom right, #ffdd00, #ffc400);
+  --gradient-yellow-hover: linear-gradient(to bottom right, #ffcc40, #ffdd00);
+
+  --gradient-blue-0: linear-gradient(
+    to bottom right,
+    var(--uniasselvi-a1),
+    var(--uniasselvi-a2)
+  );
+  --gradient-blue-1: linear-gradient(
+    to bottom right,
+    var(--uniasselvi-a2),
+    var(--uniasselvi-accent)
+  );
+  --gradient-blue-2: linear-gradient(
+    to bottom right,
+    var(--uniasselvi-accent),
+    var(--uniasselvi-a3)
+  );
+  --gradient-blue-3: linear-gradient(
+    to bottom right,
+    var(--uniasselvi-a3),
+    var(--uniasselvi-a4)
+  );
+
+  /*-- sizes --*/
+  --topbar-height: 62px;
+  --sidebar-width: 72px;
+  --button-size: 42px;
+  --max-width: 780px;
+
+  /*-- layering --*/
+  --bg-z-index: -1;
+  --header-z-index: 2;
+  --content-z-index: 5;
+  --sidebar-z-index: 8;
+  --topbar-z-index: 11;
+  --access-z-index: 12;
+  --badge-z-index: 20;
+
+  /*-- box shadow --*/
+  --content-section-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*--bg index--*/
+.bg0 {
+  background: url(../img/capas/capa_inicio.jpg) no-repeat center center;
+  background-size: cover;
+}

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Unidade 2 - Gestão de Planilhas e Documentos</title>
+
+	<meta name="description" content="Unidade 2 da disciplina de Gestão de Planilhas e Documentos da UNIASSELVI" />
+	<meta name="keywords"
+		content="Trilha de aprendizagem, Gestão de Planilhas e Documentos, Uniasselvi, EAD, Ensino Superior, Ciências Humanas, Unidade" />
+
+	<link rel="icon" type="image/png" href="../img/favicon.png" />
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js",
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-MP748JT");
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" />
+	</noscript>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/var_humanas.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/background.css" />
+
+	<script defer src="../js/progressbar.min.js"></script>
+	<script defer src="../js/main.js"></script>
+	<script src="../js/lazysizes.min.js" async></script>
+
+	<style>
+		/* Display Flex */
+
+		.flex-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* Destaque */
+
+		.novo-destaque {
+			background-color: rgb(235, 235, 235);
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+		}
+
+		.destaque-outline {
+			border: solid 2px #2c71dc;
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+		}
+
+		.folha {
+
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+			box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+			border-left: 8px solid #2c71dc;
+			border-radius: 5px;
+		}
+
+		hr {
+			margin: 40px 0px;
+			border-top: 0;
+			border-bottom: solid 1px #2c71dc;
+		}
+
+		/* Título */
+
+		.texto-destaque {
+			background-color: rgb(235, 235, 235);
+			color: black;
+			padding: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		.destaque-pratica {
+			background-color: rgb(242, 242, 242);
+			color: black;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 40px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+		}
+
+
+		.titulo-pratica {
+			border-bottom: solid 2px #2c71dc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: 25px;
+			padding-bottom: 5px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+			font-family: var(--title-font);
+			color: #2c71dc
+		}
+
+		.titulo-filled {
+			background-color: #2c71dc;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			font-weight: bold;
+			border-radius: 5px;
+			font-size: 18px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+
+		}
+
+		.titulo-outline {
+			border: solid 2px #2c71dc;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #2c71dc;
+			font-weight: bold;
+			border-radius: 5px;
+			font-size: 18px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		.titulo-destaque {
+			border-bottom: solid 2px #2c71dc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: 18px;
+			padding-bottom: 5px;
+			text-align: center;
+			text-align-last: center;
+			margin-bottom: 30px;
+		}
+
+		/* Imagens */
+
+		.nova-img {
+			height: auto;
+			width: 90%;
+			margin: 40px 0px;
+			border-radius: 10px;
+		}
+
+		.img-shadow {
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			border-radius: 10px;
+		}
+
+		/* Listas */
+
+		ul {
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 20px;
+		}
+
+		ul li::before {
+			color: #2c71dc;
+		}
+
+		ol li::before {
+			color: #2c71dc;
+		}
+
+		.checklist {
+			list-style: none;
+		}
+
+		.checklist li:before {
+			content: "✔";
+			margin-right: 8px;
+		}
+
+		.pointlist {
+			list-style: none;
+		}
+
+		.pointlist li:before {
+			content: "●";
+			margin-right: 8px;
+		}
+
+		.arrowlist {
+			list-style: none;
+		}
+
+		.arrowlist li:before {
+			content: "▸";
+			margin-right: 8px;
+		}
+
+		/* Diagrama */
+
+		.diagrama {
+			width: 100%;
+			height: auto;
+			display: flex;
+			align-items: center;
+			margin: 30px 0px;
+		}
+
+		.diagrama .titulo {
+			width: 20%;
+			height: 80px;
+			padding: 30px;
+			background-color: #2c71dc;
+			font-size: 25px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			border-radius: 10px;
+			background: #ece9e9;
+			text-shadow: 3px 2px 2px #272727;
+			text-align: center;
+			text-align-last: center;
+		}
+
+		.diagrama .conteudo {
+			padding: 15px;
+			width: 80%;
+			height: 90px;
+			background-color: #1e4f97;
+			font-size: 20px;
+			color: rgb(245, 245, 245);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0px 10px 10px 0px;
+			-webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+			font-weight: 600;
+			text-align: center;
+			text-align-last: center;
+		}
+
+		.diagrama .conteudo p {
+			line-height: 40px;
+		}
+
+		/* Quadro de Imagem e Texto */
+
+		.quadro {
+			display: flex;
+			align-items: center;
+		}
+
+		.quadro-img {
+			width: 50%;
+		}
+
+		.quadro-texto {
+			width: 50%;
+			margin-left: 30px;
+		}
+
+		/* Tabelas */
+
+		.table-content {
+			height: auto;
+			width: 100%;
+			margin: 30px 0px;
+		}
+
+		table {
+			text-align: center;
+			text-align-last: center;
+			border-collapse: collapse;
+		}
+
+		thead {
+			background-color: #2c71dc;
+			color: #fff;
+		}
+
+		tbody {
+			background-color: rgb(233, 231, 231);
+		}
+
+		th,
+		td {
+			padding: 15px;
+			border: 1px solid #3c3c3c;
+		}
+
+		@media screen and (max-width: 750px) {
+			.table-content {
+				overflow-x: scroll;
+				justify-content: flex-start;
+			}
+
+			.quadro-img {
+				width: 100%;
+			}
+
+			.quadro-texto {
+				width: 100%;
+				margin: 0;
+			}
+
+			.quadro {
+				flex-wrap: wrap;
+			}
+
+			.diagrama .titulo {
+				font-size: 15px;
+				text-align-last: center;
+			}
+
+			.diagrama .conteudo p {
+				line-height: 20px;
+			}
+
+			.diagrama .conteudo {
+				font-size: 13px;
+			}
+		}
+
+		/* Dropdown */
+
+
+		.drop-down {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.drop-content {
+			background-color: rgb(240, 240, 240);
+			padding: 20px;
+			border-radius: 5px;
+			display: none;
+			margin: 10px 0px;
+
+		}
+
+		.show {
+			background-color: rgb(235, 235, 235);
+			padding: 20px;
+			border-radius: 10px;
+			display: block;
+		}
+
+
+		.btn2 {
+			padding: 15px 10px;
+			color: #fff;
+			background-color: #2c71dc;
+			border-radius: 10px;
+			width: 100%;
+			margin: 20px 0px;
+			display: flex;
+			align-self: center;
+			justify-content: center;
+			cursor: pointer;
+			border: 0;
+			font-weight: bold;
+			font-size: 18px;
+
+		}
+
+		.btn2:hover {
+			background-color: #2562bd;
+		}
+
+
+		/*
+	
+	Dropdown HTML
+	
+	
+	
+				  <button class="btn2" onclick="showPrimeiro()">Primeiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="primeiro" class="drop-content">
+	
+	
+					Primeiro conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showSegundo()">Segundo<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="segundo" class="drop-content">
+	
+					Segundo conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showTerceiro()">Terceiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="terceiro" class="drop-content">
+	
+	
+					Terceiro conteúdo aqui
+	
+				</div>
+	
+	
+	Dropdown JS
+	
+	<script>
+	function showPrimeiro() {
+	
+		document.getElementById('primeiro').classList.toggle('show');
+	}
+	
+	function showSegundo() {
+		document.getElementById('segundo').classList.toggle('show');
+	}
+	
+	function showTerceiro() {
+		document.getElementById('terceiro').classList.toggle('show');
+	}
+	
+	function showQuarto() {
+		document.getElementById('quarto').classList.toggle('show');
+	}
+	
+	function showQuinto() {
+		document.getElementById('quinto').classList.toggle('show');
+	}
+	
+	function showSexto() {
+		document.getElementById('sexto').classList.toggle('show');
+	}
+	
+	function showSetimo() {
+		document.getElementById('setimo').classList.toggle('show');
+	}
+	</script>
+	   
+	
+	Diagramas HTML
+	
+	
+	<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #246db6;">
+	
+	
+							<p>
+								TÓPICO 1
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #3a5ba9;">
+	
+							<p>
+								Comportamento Humano e Motivação
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #ee2e6a;">
+	
+	
+							<p>
+								TÓPICO 2
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #db1c4e;">
+	
+							<p>
+								Teorias Motivacionais Aplicadas ao Trabalho
+							</p>
+	
+						</div>
+	
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #f7a31b;">
+	
+	
+							<p>
+								TÓPICO 3
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #f26821;">
+	
+							<p>
+								Cultura e Clima Organizacional e suas Influências na Motivação e no Comportamento
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+	*/
+	</style>
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">638200.000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010053A5CDB753ED6B4E836F94BDD90BC492</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP748JT" height="0" width="0"
+			style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="accessibility-menu">
+		<div id="accessibility-toggle" class="accessibility-item" onclick="toggleAccess()" title="Acessibilidade">
+			<i class="material-icons">accessibility</i>
+		</div>
+		<div id="accessibility-decrease" class="accessibility-item" onclick="decreaseFont()" title="Diminuir a Fonte">
+			<i class="material-icons">text_fields</i>
+		</div>
+		<div id="accessibility-reset" class="accessibility-item" onclick="resetFont()" title="Redefinir a Fonte">
+			<i class="material-icons">title</i>
+		</div>
+		<div id="accessibility-increase" class="accessibility-item" onclick="increaseFont()" title="Aumentar a Fonte">
+			<i class="material-icons">format_size</i>
+		</div>
+	</div>
+
+	<div id="material-menu" class="hidden">
+		<a id="material-menu-livro" class="menu-side-item" title="Livro da Disciplina" target="_blank"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/livro/livro.php?codigo=289838">
+			<img src="../img/ico/livro.svg" alt="Ícone Livro" />
+		</a>
+		<a id="material-menu-gabarito" class="menu-side-item" title="Gabarito"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/gabarito/gabarito.php?codigo=289838"
+			target="_blank">
+			<img src="../img/ico/gabarito.svg" alt="Ícone Gabarito" />
+		</a>
+		<a id="material-menu-videos" class="menu-side-item" title="Vídeos da Disciplina" href="videos.html">
+			<img src="../img/ico/video.svg" alt="Ícone Vídeo" />
+		</a>
+		<a id="material-menu-objetos" class="menu-side-item" title="Objetos de Aprendizagem" href="objetos.html">
+			<img src="../img/ico/objeto.svg" alt="Ícone Objeto" />
+		</a>
+		<div id="material-menu-toggle" class="flex-c clickable" onclick="toggleMaterial()">
+			<i class="material-icons">expand_more</i>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="top-menu-toggle flex-c" onclick="toggleMenu()">
+			<i class="material-icons">menu</i>
+		</div>
+		<div id="topbar">
+			<div class="top-uniwrapper">
+				<a class="top-unidade" href="apresentacao.html">
+					<div class="top-antes"></div>
+					<span>Apresentação</span>
+					<div class="top-depois"></div>
+				</a>
+				<a class="top-unidade" href="unidade1.html">
+					<div class="top-antes"></div>
+					<span>Unidade 1</span>
+					<div class="top-depois"></div>
+				</a>
+				<a class="top-unidade selected">
+					<div class="top-antes"></div>
+					<span>Unidade 2</span>
+					<div class="top-depois"></div>
+				</a>
+				<a class="top-unidade" href="unidade3.html">
+					<div class="top-antes"></div>
+					<span>Unidade 3</span>
+					<div class="top-depois"></div>
+				</a>
+			</div>
+			<div class="topbar-progress"></div>
+		</div>
+
+		<div id="sidebar">
+			<div class="wrapper">
+				<div class="sidebar-logo">
+					<img src="../img/favicon.png" alt="Logo Uniasselvi" />
+				</div>
+
+				<!-- <div class="sidebar-group">
+                    <div id="main-menu-inicio" class="sidebar-item" onclick="redirect('inicio')">
+                        <span>Início</span>
+                    </div>
+                </div> -->
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Minha Trilha</div>
+					<div id="main-menu-apresentacao" class="sidebar-item" onclick="redirect('apresentacao')">
+						Apresentação
+					</div>
+					<div id="main-menu-u1" class="sidebar-item" onclick="redirect('unidade1')">
+						Unidade 1
+					</div>
+					<div id="main-menu-u2" class="sidebar-item selected" onclick="redirect('unidade2')">
+						<span>Unidade 2</span>
+						<div class="sidebar-progress"></div>
+					</div>
+					<div id="main-menu-u3" class="sidebar-item" onclick="redirect('unidade3')">
+						Unidade 3
+					</div>
+				</div>
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Conteúdo Didático</div>
+					<div id="main-menu-livro" class="sidebar-item"
+						onclick="document.querySelector('#material-menu-livro').click()">
+						Livro Didático
+					</div>
+					<div id="main-menu-videos" class="sidebar-item" onclick="redirect('videos')">
+						Vídeos da Disciplina
+					</div>
+					<div id="main-menu-objetos" class="sidebar-item" onclick="redirect('objetos')">
+						Objetos de Aprendizagem
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="wrapper">
+				<div class="title-big bg3"></div>
+
+				<div class="spacer-40"></div>
+
+				<div class="content-section column flex-c">
+					<h1 class="subheader text-center">
+						INTRODUÇÃO AOS SISTEMAS DE INFORMAÇÃO
+					</h1>
+					<h2 class="header header-gradient text-center">
+						Unidade 2
+					</h2>
+
+
+					<div class="content-text">
+
+						<p>
+							Chegamos à Unidade 2 da disciplina de Gestão de Planilhas e Documentos. Nesta unidade, nosso
+							foco é compreender que a informação na atualidade tem mostrado ter importância crescente,
+							tornando-se um diferencial competitivo, diante das exigências do mercado em que as
+							organizações
+							estão inseridas, no qual a informação é primordial para o desenvolvimento de novas
+							tecnologias,
+							bem como para oportunidades de investimento e para diminuir as incertezas no processo de
+							tomada
+							de decisão, aumentado a qualidade da operacionalização organizacional.
+						</p>
+
+						<div class="dica-leitura">
+							<img src="../img/ico/leia_mais_outline.svg" alt="Dica de Leitura">
+
+							<p class="titulo-filled">A partir do estudo desta unidade, você será capaz de:</p>
+
+							<ul class="arrowlist">
+								<li>Identificar um sistema de informação gerencial;</li>
+								<li>Identificar os benefícios de um sistema de informação gerencial;</li>
+								<li>Compreender o funcionamento do processo de instalação de software;</li>
+								<li>Analisar o uso do sistema de informações gerenciais para a tomada de decisão.</li>
+							</ul>
+
+						</div>
+
+						<br>
+
+						<p class="titulo-destaque">Informações na empresa</p>
+
+						<p>
+							Cotidianamente, inúmeros acontecimentos internos e externos à organização geram novas
+							situações,
+							nas quais a informação é componente-base para soluções modernas e viáveis.
+						</p>
+
+						<p>
+							A informação efetiva é aquela que orientará uma decisão concreta e confiável, visto que
+							reduz as
+							incertezas no decurso do processo, potencializando a qualidade.
+						</p>
+
+						<p>
+							Segundo Oliveira (1992), a informação exerce papel fundamental no processo decisório,
+							levando as
+							organizações a outro patamar, estabelecendo um novo modelo de gestão empresarial que
+							compreende
+							uma nova perspectiva, trocando o capital/trabalho pela informação/conhecimento, fatores
+							definitivos para o sucesso empresarial.
+						</p>
+
+						<p>
+							Diante disso, esse novo formato de gestão deve prezar por processos decisórios que envolvam
+							e
+							estimulem o emprego da informação e do conhecimento, incentivando a eficiência e a disputa
+							eficaz e saudável.
+						</p>
+
+						<p>
+							Assim sendo, a utilização correta da informação e a habilidade de transformá-la em
+							conhecimento
+							aplicável torna-se primordial para o desenvolvimento de atividades e processos
+							institucionais, a
+							fim de propiciar o uso eficiente dos recursos, elevando os resultados e melhorando a
+							capacidade
+							concorrencial e estratégica da empresa.
+						</p>
+
+
+
+						<div class="flex-content">
+
+							<img src="./img/img3.jpg" class="nova-img" style="margin-bottom: 0" alt="">
+
+						</div>
+
+						<div class="flex-content">
+							<p><b>Fonte</b>: <a
+									href="https://br.freepik.com/vetores-gratis/conceito-do-conhecimento-escolar_763296.htm#query=conhecimento&position=0&from_view=search"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+						</div>
+
+
+						<br>
+
+						<p class="titulo-destaque" style="margin-bottom:0">Mas o que é informação?</p>
+
+
+						<div class="flex-content">
+
+							<img src="./img/img4.jpg" class="nova-img" style="margin: 0" alt="">
+
+						</div>
+
+						<div class="flex-content">
+							<p><b>Fonte</b>: <a
+									href="https://br.freepik.com/vetores-gratis/mulher-pensativa-com-laptop-olhando-para-o-grande-ponto-de-interrogacao_13330330.htm#query=interroga%C3%A7%C3%A3o&position=4&from_view=search"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+						</div>
+
+
+						<p>
+							<b>Informação</b>: “é quando temos conjunto de dados organizados de maneira que as pessoas
+							possam
+							utilizar na tomada de decisões” (CÔRTES, 2004, p. 12). São dados organizados logicamente.
+						</p>
+
+						<p>
+							A informação é fundamental para as empresas e, para tanto, necessitam ser gerenciadas. Para
+							auxiliar nesse processo de gerenciamento da informação, as organizações contam com os
+							chamados
+							sistemas informacionais de gestão.
+						</p>
+
+						<p>
+							Os sistemas de informação gerencial são ferramentas disponíveis para que a gestão
+							organizacional
+							alcance suas metas, como excelência operacional, desenvolvimento de novos produtos e
+							serviços,
+							tomada de decisões aprimoradas e vantagem competitiva.
+						</p>
+
+
+						<div class="flex-content">
+
+							<img src="./img/img6.jpg" class="nova-img" style="margin-bottom: 0" alt="">
+
+						</div>
+
+						<div class="flex-content">
+							<p><b>Fonte</b>: <a
+									href="https://br.freepik.com/vetores-gratis/ilustracao-do-conceito-de-programador_8672698.htm#query=sistema&position=1&from_view=search"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+						</div>
+
+
+						<p>
+							São grandes parceiros no processo de automação da gestão de dados que permeiam as
+							organizações e
+							fazem parte da tecnologia da informação, tão necessária nas organizações para aprimorar e
+							otimizar processos.
+						</p>
+						<br>
+
+						<p class="titulo-destaque">Sistemas de informação empresariais</p>
+
+						<p>
+							As organizações, de forma intrínseca, são grandes sistemas, que ao se relacionarem com seus
+							sistemas menores (departamentos e setores) e com os sistemas de informações intensificam a
+							geração de informações. Estas, ao serem manipuladas, organizadas e utilizadas, assessoram os
+							processos gerenciais e decisórios.
+						</p>
+
+						<p>
+							Para que as empresas permaneçam no mercado de forma competitiva e sólida, é imprescindível
+							que
+							utilizem sistemas de informações e tecnologia da informação para desenvolver suas ações e
+							planejamento.
+						</p>
+
+						<p>
+							No contexto empresarial, os sistemas de informação surgem com o objetivo de auxiliar o
+							desenvolvimento das atividades internas dos diversos níveis organizacionais.
+						</p>
+
+						<div class="dica-leitura">
+							<img src="../img/ico/leia_mais_outline.svg" alt="Dica de Leitura">
+							<p>
+								Para além da leitura do material do livro didático, deixamos como dica de leitura o
+								artigo:
+								“O
+								que é ERP?”, da Sap. Esse material irá lhe auxiliar no entendimento sobre os sistemas
+								ERP.
+								Eles
+								são agora disponibilizados em nuvem e usam as tecnologias mais recentes – como IA
+								(inteligência
+								artificial) e Machine Learning – para fornecer automação inteligente, maior eficiência e
+								insights instantâneos em toda a empresa. Para se aprofundar nesse tema, acesse o link a
+								seguir e
+								compreenda melhor as funcionalidades do ERP nas organizações.
+							</p>
+
+							<p style="font-size: 14px"><b>Fonte</b>: <a
+									href="https://www.scielo.br/j/cest/a/mVqm4JCd8YFKs8JHcGBvX9L/?lang=pt&format=pdf"
+									class="humanas" target="_blank">Disponível aqui</a></p>
+							<a class="content-link flex-c" href="https://www.senior.com.br/sistema-erp-o-que-e-e-como-funciona "
+								target="_blank">
+								<i class="material-icons">description</i>
+								<span>O que é ERP?</span>
+							</a>
+						</div>
+
+
+						<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+							src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1293585814&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+						<div
+							style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+							<a href="https://soundcloud.com/uniasselvi" title="EdTech NEAD" target="_blank"
+								style="color: #cccccc; text-decoration: none;">EdTech NEAD</a> · <a
+								href="https://soundcloud.com/uniasselvi/gestao-planilhas-documentos-unidade-2"
+								title="Gestão Planilhas Documentos - Unidade 2" target="_blank"
+								style="color: #cccccc; text-decoration: none;">Gestão Planilhas Documentos - Unidade
+								2</a>
+						</div>
+
+						No livro <i>Arquivologia, biblioteconomia e ciência da informação: identidades, contrastes e perspectivas de interlocução</i>, os autores definem um campo interdisciplinar preocupado principalmente com a análise, a coleta, a manipulação, o armazenamento, a recuperação e a disseminação de dados.
+
+						<br>
+
+						<p><b>Referência</b></p>
+						<p>Eduardo Ismael Murguia, Mara Eliane Fonseca Rodrigues (org.). Arquivologia, Biblioteconomia e Ciência da Informação: identidades, contrastes e perspectivas de interlocução. Niterói, RJ: EDUFF. 2012. ISBN: 9788522808816</p>
+
+						<div class="dica-leitura">
+							<img src="../img/ico/dica_d_outline.svg" alt="Dica de Leitura">
+							<p>Este é um recurso educacional aberto acessível no link: </p>
+							<a class="content-link flex-c" href="http://ppgci.uff.br/wp-content/uploads/sites/86/2019/11/PPGCI-IISEI-livro2.pdf" target="_blank">
+								<i class="material-icons">description</i>
+								<span>Arquivologia, biblioteconomia e ciência da informação: identidades, contrastes e perspectivas de interlocução</span>
+							</a>
+						</div>
+
+						<div class="folha">
+
+							<p class="titulo-pratica">ATIVIDADE PRÁTICA UNIDADE 2</p>
+
+							<ul class="arrowlist">
+								<li><b>Questão 1</b></li>
+							</ul>
+
+							<p>
+								Desenvolver sistemas de informação requer uma leitura criteriosa da empresa que os
+								utiliza.
+								É importante considerar como a empresa se organiza em torno de suas metas, como ela
+								resolve
+								as restrições impostas pelo ambiente e como os departamentos se integram para dar conta
+								da
+								missão empresarial. É justamente nesse ponto que a visão funcional, com base nos
+								organogramas e na departamentalização, mostra-se insuficiente, porque evidencia a
+								divisão e
+								a especialização. Dentre as diferentes formas de compreender as empresas, a visão
+								sistêmica,
+								ainda que não negue a importância da visão funcional, preocupa-se com aspectos
+								específicos.
+								Na verdade, afirma que as empresas excedem a soma de suas atividades.
+							</p>
+
+							<p>
+								<b>
+									Descreva a atuação dos sistemas de informação nos âmbitos: estratégico, técnico e
+									financeiro.
+								</b>
+							</p>
+
+							<ul class="arrowlist">
+								<li><b>Questão 2</b></li>
+							</ul>
+
+							<p>
+								Os sistemas de informação evoluem à medida que são implantados nas empresas, passando de
+								rudimentares a mais complexos. De acordo com os conteúdos abordados nas aulas e nos
+								textos-base, descreva a importância da integração dos ERPs.
+							</p>
+
+						</div>
+
+						<p>Confira o vídeo a seguir, onde abordamos a Introdução aos Sistemas de Informação:</p>
+
+					</div>
+					
+						<div class="video">
+							<div class="video-large">
+								<iframe class="lazyload" title="Vídeo da Disciplina" width="1280" height="720"
+									data-src="https://www.youtube.com/embed/Z7HP4E9HJHs?rel=0&amp;showinfo=0&amp;disablekb=1&amp;modestbranding=1&amp;allowfullscreen=1"
+									allowfullscreen="true">
+								</iframe>
+							</div>
+						</div>
+					
+					<div class="content-text">
+
+
+					</div>
+
+
+
+					<!-- Final do conteúdo -->
+					<br />
+					<div class="subheader">BONS ESTUDOS!</div>
+					<br />
+
+					<div class="button-group">
+						<div class="button-wrapper flex-c" title="Ir para Unidade 1">
+							<a id="nav-prev" class="button-next" href="unidade1.html">
+								<i class="material-icons large">chevron_left</i>
+								&emsp;Unidade 1</a>
+						</div>
+
+						<div class="button-wrapper flex-c" title="Voltar ao Topo">
+							<div id="nav-top" class="button-top" onclick="sctop()">
+								<i class="material-icons large">expand_less</i>
+							</div>
+						</div>
+
+						<div class="button-wrapper flex-c" title="Ir para Unidade 3">
+							<a id="nav-next" class="button-next" href="unidade3.html">
+								Unidade 3&emsp;<i class="material-icons large">chevron_right</i></a>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Footer -->
+
+				<div class="content-footer v22-1">
+					<div class="footer-marca">
+						<img src="../img/favicon.png" alt="" />
+						<span class="footer-marca-texto">UNIASSELVI © Todos os direitos
+							reservados.</span>
+					</div>
+					<div class="footer-links">
+						<a href="https://portal.uniasselvi.com.br/" target="_blank">
+							<img src="../img/favicon.png" alt="" />
+							Acesse o Portal UNIASSELVI</a>
+						<a href="https://ava2.uniasselvi.com.br/">
+							<img src="../img/texto_gio.svg" alt="" />
+
+							Ir para o AVA</a>
+					</div>
+				</div>
+				<!-- 3/div -->
+			</div>
+		</div>
+	</div>
+	<script>
+		/* Defer font loading */
+		var giftofspeed = document.createElement("link");
+		giftofspeed.rel = "stylesheet";
+		giftofspeed.href =
+			"https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+		var godefer = document.getElementsByTagName("link")[0];
+		godefer.parentNode.insertBefore(giftofspeed, godefer);
+	</script>
+</body>
+
+</html>

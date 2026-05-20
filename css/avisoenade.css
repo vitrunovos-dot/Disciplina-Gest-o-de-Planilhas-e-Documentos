@@ -1,0 +1,66 @@
+/* feito pchamado 47263943 */
+.aviso-fundo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.aviso-colors {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 4px #868686;
+    background: var(--uniasselvi-yellow);
+}
+
+.cyan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    background-color: var(--uniasselvi-cyan);
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
+
+.orange {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 250px 250px 0;
+    border-color: transparent var(--uniasselvi-orange) transparent transparent;
+}
+
+.content-aviso {
+    box-sizing: border-box;
+    text-align-last: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px #868686;
+    background-color: #fff;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.content-aviso h1 {
+    line-height: 1.2em;
+}
+
+.aviso-enade {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .content-aviso {
+        width: 90%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,95 @@
+.aviso-pratica {
+  padding: 1.25rem;
+  border: 0.125rem solid var(--uniasselvi-accent);
+  border-radius: 0.625rem;
+}
+
+.aviso-pratica header h2 {
+  display: block;
+  text-align: center;
+  text-align-last: center;
+}
+
+.aviso-pratica header p {
+  text-align: center;
+  text-align-last: center;
+}
+
+.aviso-pratica ul {
+  padding: 0;
+}
+
+.aviso-pratica ul li {
+  position: relative;
+  padding-left: 1.375rem;
+  text-align: left;
+  text-align-last: left;
+  margin-bottom: 0.625rem;
+}
+
+.aviso-pratica ul li::before {
+  color: var(--uniasselvi-accent);
+  margin-right: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.aviso-pratica ul {
+  list-style: none;
+}
+
+.aviso-pratica ul li::before {
+  content: "check";
+  font-family: "Material Icons";
+}
+
+.aviso-pratica hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--uniasselvi-accent);
+  margin: 1.25rem 0;
+}
+
+.aviso-pratica .destaque {
+  background-color: #eeeeee;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+}
+
+.aviso-pratica-painel-controle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+  margin: 1.25rem 0;
+}
+
+.aviso-pratica-botao {
+  font-weight: bold;
+  text-align: center;
+  text-align-last: center;
+  text-transform: uppercase;
+  background-color: #eeeeee;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 2px solid #cecece;
+  cursor: pointer;
+}
+
+.aviso-pratica-botao[data-active="true"],
+.aviso-pratica-botao:hover {
+  background-color: var(--uniasselvi-accent);
+  border: 2px solid var(--uniasselvi-accent);
+}
+
+.aviso-pratica-conteudo {
+  display: none;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid var(--uniasselvi-accent);
+  margin: 1.25rem 0;
+}
+
+.aviso-pratica-conteudo[data-active="true"] {
+  display: block;
+}

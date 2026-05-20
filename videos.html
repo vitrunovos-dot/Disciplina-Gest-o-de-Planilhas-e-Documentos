@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vídeos da Disciplina - Gestão de Planilhas e Documentos</title>
+
+	<meta name="description" content="Vídeos da disciplina de Gestão de Planilhas e Documentos da UNIASSELVI" />
+	<meta name="keywords"
+		content="Trilha de aprendizagem, Gestão de Planilhas e Documentos, Uniasselvi, EAD, Ensino Superior, Ciências Humanas, Vídeos" />
+
+	<link rel="icon" type="image/png" href="../img/favicon.png" />
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js",
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-MP748JT");
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" />
+	</noscript>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/var_humanas.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/background.css" />
+
+	<script defer src="../js/progressbar.min.js"></script>
+	<script defer src="../js/main.js"></script>
+	<script src="../js/lazysizes.min.js"></script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">638600.000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010053A5CDB753ED6B4E836F94BDD90BC492</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP748JT" height="0" width="0"
+			style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="accessibility-menu">
+		<div id="accessibility-toggle" class="accessibility-item" onclick="toggleAccess()" title="Acessibilidade">
+			<i class="material-icons">accessibility</i>
+		</div>
+		<div id="accessibility-decrease" class="accessibility-item" onclick="decreaseFont()" title="Diminuir a Fonte">
+			<i class="material-icons">text_fields</i>
+		</div>
+		<div id="accessibility-reset" class="accessibility-item" onclick="resetFont()" title="Redefinir a Fonte">
+			<i class="material-icons">title</i>
+		</div>
+		<div id="accessibility-increase" class="accessibility-item" onclick="increaseFont()" title="Aumentar a Fonte">
+			<i class="material-icons">format_size</i>
+		</div>
+	</div>
+
+	<div id="material-menu" class="hidden">
+		<a id="material-menu-livro" class="menu-side-item" title="Livro da Disciplina" target="_blank"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/livro/livro.php?codigo=289838">
+			<img src="../img/ico/livro.svg" alt="Ícone Livro" />
+		</a>
+		<a id="material-menu-gabarito" class="menu-side-item" title="Gabarito"
+			href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/gabarito/gabarito.php?codigo=289838"
+			target="_blank">
+			<img src="../img/ico/gabarito.svg" alt="Ícone Gabarito" />
+		</a>
+		<a id="material-menu-videos" class="menu-side-item" title="Vídeos da Disciplina" href="videos.html">
+			<img src="../img/ico/video.svg" alt="Ícone Vídeo" />
+		</a>
+		<a id="material-menu-objetos" class="menu-side-item" title="Objetos de Aprendizagem" href="objetos.html">
+			<img src="../img/ico/objeto.svg" alt="Ícone Objeto" />
+		</a>
+		<div id="material-menu-toggle" class="flex-c clickable" onclick="toggleMaterial()">
+			<i class="material-icons">expand_more</i>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="top-menu-toggle flex-c" onclick="toggleMenu()">
+			<i class="material-icons">menu</i>
+		</div>
+
+		<div id="topbar">
+			<div class="top-uniwrapper">
+				<!-- <a id="topbar-inicio" class="top-unidade" href="inicio.html">
+                    <div class="top-antes"></div>
+                    <span>Início</span>
+                    <div class="top-depois"></div>
+                </a> -->
+				<a id="topbar-livro" class="top-unidade"
+					onclick="document.querySelector('#material-menu-livro').click()">
+					<div class="top-antes"></div>
+					<span>Livro Didático</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-videos" class="top-unidade selected">
+					<div class="top-antes"></div>
+					<span>Vídeos da Disciplina</span>
+					<div class="top-depois"></div>
+				</a>
+				<a id="topbar-objetos" class="top-unidade" href="objetos.html">
+					<div class="top-antes"></div>
+					<span>Objetos de Aprendizagem</span>
+					<div class="top-depois"></div>
+				</a>
+			</div>
+			<div class="topbar-progress"></div>
+		</div>
+		<div id="sidebar">
+			<div class="wrapper">
+				<div class="sidebar-logo">
+					<img src="../img/favicon.png" alt="Logo Uniasselvi" />
+				</div>
+
+				<!-- <div class="sidebar-group">
+                    <div id="main-menu-inicio" class="sidebar-item" onclick="redirect('inicio')">
+                        <span>Início</span>
+                    </div>
+                </div> -->
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Minha Trilha</div>
+					<div id="main-menu-apresentacao" class="sidebar-item" onclick="redirect('apresentacao')">
+						Apresentação
+					</div>
+					<div id="main-menu-u1" class="sidebar-item" onclick="redirect('unidade1')">
+						<span>Unidade 1</span>
+					</div>
+					<div id="main-menu-u2" class="sidebar-item" onclick="redirect('unidade2')">
+						<span>Unidade 2</span>
+					</div>
+					<div id="main-menu-u3" class="sidebar-item" onclick="redirect('unidade3')">
+						Unidade 3
+					</div>
+				</div>
+
+				<div class="sidebar-group">
+					<div class="sidebar-title">Conteúdo Didático</div>
+					<div id="main-menu-livro" class="sidebar-item"
+						onclick="document.querySelector('#material-menu-livro').click()">
+						Livro Didático
+					</div>
+					<div id="main-menu-videos" class="sidebar-item selected">
+						<span>Vídeos da Disciplina</span>
+						<div class="sidebar-progress"></div>
+					</div>
+					<div id="main-menu-objetos" class="sidebar-item" onclick="redirect('objetos')">
+						Objetos de Aprendizagem
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="wrapper">
+				<div class="title-big flex-c text-white bgv"></div>
+				<div class="content-section flex-c column" style="margin-top: -200px">
+					<div class="subheader text-center">
+						Gestão de Planilhas e Documentos
+					</div>
+					<h1 class="header header-gradient text-center">
+						Vídeos da Disciplina
+					</h1>
+					<div class="content-text">
+						Olá, acadêmico!<br /><br />
+						Para facilitar o seu acesso reunimos aqui todos os
+						vídeos da disciplina de Gestão de Planilhas e Documentos.
+					</div>
+				</div>
+
+				<div class="content-wide blue-gradient-1">
+					<div class="wide-wrapper">
+						<!-- Inserir a div de video aqui dentro -->
+						<!-- Ela é a class="video" -->
+					</div>
+				</div>
+
+				<div class="content-wide blue-gradient-1">
+					<div class="wide-wrapper"></div>
+				</div>
+				<div class="content-wide blue-gradient-1">
+					<div class="wide-wrapper"></div>
+				</div>
+				<!-- Footer -->
+
+				<div class="content-footer v22-1">
+					<div class="footer-marca">
+						<img src="../img/favicon.png" alt="" />
+						<span class="footer-marca-texto">UNIASSELVI © Todos os direitos
+							reservados.</span>
+					</div>
+					<div class="footer-links">
+						<a href="https://portal.uniasselvi.com.br/" target="_blank">
+							<img src="../img/favicon.png" alt="" />
+							Acesse o Portal UNIASSELVI</a>
+						<a href="https://ava2.uniasselvi.com.br/">
+							<img src="../img/texto_gio.svg" alt="" />
+
+							Ir para o AVA</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" defer>
+	/* Defer font loading */
+	var giftofspeed = document.createElement("link");
+	giftofspeed.rel = "stylesheet";
+	giftofspeed.href =
+		"https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+	var godefer = document.getElementsByTagName("link")[0];
+	godefer.parentNode.insertBefore(giftofspeed, godefer);
+</script>
+
+</html>

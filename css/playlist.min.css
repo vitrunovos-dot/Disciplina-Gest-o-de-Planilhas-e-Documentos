@@ -1,0 +1,206 @@
+.itens-list,
+.video-title {
+  max-width: var(--max-width);
+  box-sizing: border-box;
+}
+:root {
+  --title-font: "neo-sans", "Montserrat", sans-serif;
+  --uniasselvi-border-radius: 2px;
+}
+.playlist {
+  width: 100%;
+  margin: 2em 0;
+}
+.playlist + .content-text {
+  margin-top: 0;
+}
+.playlist .video {
+  width: 100%;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.itens-list {
+  height: 120px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 12px;
+  padding: 16px 4px;
+}
+.itens-list::-webkit-scrollbar-track {
+  background-color: #dbdbdb;
+}
+.itens-list::-webkit-scrollbar {
+  height: 8px;
+}
+.itens-list::-webkit-scrollbar-thumb {
+  background-color: var(--uniasselvi-accent);
+  border-radius: 8px;
+}
+.video-item {
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 34/18;
+  transition: background 0.2s;
+  border-radius: var(--uniasselvi-border-radius);
+  box-shadow: 0 0 0 2px var(--uniasselvi-grey), 0 1px 3px rgba(0, 0, 0, 0.2),
+    2px 5px 9px rgba(0, 0, 0, 0.1);
+}
+.video-item:hover {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.video-item :focus {
+  outline: 0;
+}
+.video-item.selected .material-icons,
+.video-item.video-item.selected::after,
+.video-item:hover .material-icons,
+.video-item:hover::after {
+  opacity: 0;
+}
+.video-item.selected {
+  box-shadow: 0 0 0 3px var(--uniasselvi-accent);
+}
+.video-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8)
+  );
+  box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 5px rgba(256, 255, 255, 0.1);
+  transition: 0.2s;
+}
+.video-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-item .material-icons {
+  position: absolute;
+  z-index: 2;
+  font-size: 40px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.video-item.watched::before {
+  content: "✅";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  font-size: 24px;
+  width: 21px;
+  height: 21px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.playlist-nav {
+  max-width: var(--max-width);
+  margin: 2em auto 1em;
+  display: grid;
+  grid-template-areas: "nav . watched toggle";
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+}
+.nav-buttons {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.watched-filter {
+  grid-area: watched;
+}
+.watched-toggle {
+  grid-area: toggle;
+}
+.playlist-nav button {
+  font-family: var(--title-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: var(--uniasselvi-border-radius);
+  background: var(--uniasselvi-accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 2px 5px 9px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.playlist-nav button:hover {
+  box-shadow: 0 0 0 2px;
+}
+.video-title {
+  margin: 2em auto;
+  border-left: 4px solid var(--uniasselvi-accent);
+  padding-left: 8px;
+}
+.filter-on,
+.playlist.filtered .filter-off,
+.playlist.filtered .video-item.watched,
+.playlist.filtered .watched-filter-toggle-icon-false,
+.watched-filter-toggle-icon-true,
+.watched-toggle .watched-toggle-icon-true,
+.watched-toggle.true .watched-toggle-icon-false {
+  display: none;
+}
+.watched-toggle-icon-true,
+.watched-toggle.true .watched-toggle-icon-true {
+  color: #32ba2b;
+  display: inline;
+}
+.playlist.filtered .filter-on,
+.playlist.filtered .watched-filter-toggle-icon-true {
+  display: inline;
+}
+@media screen and (max-width: 800px) {
+  .playlist-nav {
+    grid-template-areas: "nav toggle" "watched .";
+    grid-template-columns: 1fr;
+  }
+  .nav-buttons,
+  .playlist-nav button {
+    width: fit-content;
+  }
+  .playlist-nav .watched-filter {
+    box-shadow: none;
+    background: 0 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .playlist-nav {
+    grid-template-areas: "nav nav" "watched toggle";
+  }
+  .video-title h2 {
+    font-size: 1.2em;
+  }
+  .playlist-nav .watched-toggle {
+    box-shadow: none;
+    background: 0 0;
+  }
+}

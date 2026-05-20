@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidade 1 - Gestão de Planilhas e Documentos</title>
+
+    <meta
+      name="description"
+      content="Unidade 1 da disciplina de Gestão de Planilhas e Documentos da UNIASSELVI"
+    />
+    <meta
+      name="keywords"
+      content="Trilha de aprendizagem, Gestão de Planilhas e Documentos, Uniasselvi, EAD, Ensino Superior, Ciências Humanas, Unidade"
+    />
+
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-MP748JT')
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      />
+    </noscript>
+
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/var_humanas.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/background.css" />
+
+    <script defer src="../js/progressbar.min.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script src="../js/lazysizes.min.js" async></script>
+
+    <style>
+      /* Display Flex */
+
+      .flex-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Destaque */
+
+      .novo-destaque {
+        margin: 40px 0px;
+        -webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 5px;
+        background-color: rgb(235, 235, 235);
+        padding: 10px 20px;
+        color: black;
+      }
+
+      .destaque-outline {
+        margin: 40px 0px;
+        -webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border: solid 2px #2c71dc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: black;
+      }
+
+      .folha {
+        margin: 40px 0px;
+        -webkit-box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+        box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.26);
+        border-left: 8px solid #2c71dc;
+        border-radius: 5px;
+
+        padding: 10px 20px;
+      }
+
+      hr {
+        margin: 40px 0px;
+        border-top: 0;
+        border-bottom: solid 1px #2c71dc;
+      }
+
+      /* Título */
+
+      .texto-destaque {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: rgb(235, 235, 235);
+        padding: 10px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        text-align-last: center;
+      }
+
+      .destaque-pratica {
+        margin: 40px 0px;
+        -webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 5px;
+        background-color: rgb(242, 242, 242);
+        padding: 10px 20px;
+        color: black;
+      }
+
+      .titulo-pratica {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        border-bottom: solid 2px #2c71dc;
+        padding-bottom: 5px;
+        color: #2c71dc;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: var(--title-font);
+        text-align: center;
+        text-align-last: center;
+      }
+
+      .titulo-filled {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        background-color: #2c71dc;
+        padding: 10px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        text-align-last: center;
+      }
+
+      .titulo-outline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        border: solid 2px #2c71dc;
+        border-radius: 5px;
+        padding: 10px;
+        color: #2c71dc;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        text-align-last: center;
+      }
+
+      .titulo-destaque {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        border-bottom: solid 2px #2c71dc;
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        text-align-last: center;
+      }
+
+      /* Imagens */
+
+      .nova-img {
+        margin: 40px 0px;
+        border-radius: 10px;
+        width: 90%;
+        height: auto;
+      }
+
+      .img-shadow {
+        -webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 10px;
+      }
+
+      /* Listas */
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      ul li::before {
+        color: #2c71dc;
+      }
+
+      ol li::before {
+        color: #2c71dc;
+      }
+
+      .checklist {
+        list-style: none;
+      }
+
+      .checklist li:before {
+        margin-right: 8px;
+        content: '✔';
+      }
+
+      .pointlist {
+        list-style: none;
+      }
+
+      .pointlist li:before {
+        margin-right: 8px;
+        content: '●';
+      }
+
+      .arrowlist {
+        list-style: none;
+      }
+
+      .arrowlist li:before {
+        margin-right: 8px;
+        content: '▸';
+      }
+
+      /* Diagrama */
+
+      .diagrama {
+        display: flex;
+        align-items: center;
+        margin: 30px 0px;
+        width: 100%;
+        height: auto;
+      }
+
+      .diagrama .titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 10px;
+        background-color: #2c71dc;
+        background: #ece9e9;
+        padding: 30px;
+        width: 20%;
+        height: 80px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+        text-align-last: center;
+        text-shadow: 3px 2px 2px #272727;
+      }
+
+      .diagrama .conteudo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 0px 10px 10px 0px;
+        background-color: #1e4f97;
+        padding: 15px;
+        width: 80%;
+        height: 90px;
+        color: rgb(245, 245, 245);
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        text-align-last: center;
+      }
+
+      .diagrama .conteudo p {
+        line-height: 40px;
+      }
+
+      /* Quadro de Imagem e Texto */
+
+      .quadro {
+        display: flex;
+        align-items: center;
+      }
+
+      .quadro-img {
+        width: 50%;
+      }
+
+      .quadro-texto {
+        margin-left: 30px;
+        width: 50%;
+      }
+
+      /* Tabelas */
+
+      .table-content {
+        margin: 30px 0px;
+        width: 100%;
+        height: auto;
+      }
+
+      table {
+        border-collapse: collapse;
+        text-align: center;
+        text-align-last: center;
+      }
+
+      thead {
+        background-color: #2c71dc;
+        color: #fff;
+      }
+
+      tbody {
+        background-color: rgb(233, 231, 231);
+      }
+
+      th,
+      td {
+        border: 1px solid #3c3c3c;
+        padding: 15px;
+      }
+
+      @media screen and (max-width: 750px) {
+        .table-content {
+          justify-content: flex-start;
+          overflow-x: scroll;
+        }
+
+        .quadro-img {
+          width: 100%;
+        }
+
+        .quadro-texto {
+          margin: 0;
+          width: 100%;
+        }
+
+        .quadro {
+          flex-wrap: wrap;
+        }
+
+        .diagrama .titulo {
+          font-size: 15px;
+          text-align-last: center;
+        }
+
+        .diagrama .conteudo p {
+          line-height: 20px;
+        }
+
+        .diagrama .conteudo {
+          font-size: 13px;
+        }
+      }
+
+      /* Dropdown */
+
+      .drop-down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .drop-content {
+        display: none;
+        margin: 10px 0px;
+        border-radius: 5px;
+        background-color: rgb(240, 240, 240);
+        padding: 20px;
+      }
+
+      .show {
+        display: block;
+        border-radius: 10px;
+        background-color: rgb(235, 235, 235);
+        padding: 20px;
+      }
+
+      .btn2 {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+        margin: 20px 0px;
+        border: 0;
+        border-radius: 10px;
+        background-color: #2c71dc;
+        padding: 15px 10px;
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .btn2:hover {
+        background-color: #2562bd;
+      }
+
+      /*
+	
+	Dropdown HTML
+	
+	
+	
+				  <button class="btn2" onclick="showPrimeiro()">Primeiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="primeiro" class="drop-content">
+	
+	
+					Primeiro conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showSegundo()">Segundo<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="segundo" class="drop-content">
+	
+					Segundo conteúdo aqui
+	
+				</div>
+	
+	
+	
+				<button class="btn2" onclick="showTerceiro()">Terceiro<i
+						class="material-icons drop-icon">keyboard_arrow_down</i></button>
+	
+				<div id="terceiro" class="drop-content">
+	
+	
+					Terceiro conteúdo aqui
+	
+				</div>
+	
+	
+	Dropdown JS
+	
+	<script>
+	function showPrimeiro() {
+	
+		document.getElementById('primeiro').classList.toggle('show');
+	}
+	
+	function showSegundo() {
+		document.getElementById('segundo').classList.toggle('show');
+	}
+	
+	function showTerceiro() {
+		document.getElementById('terceiro').classList.toggle('show');
+	}
+	
+	function showQuarto() {
+		document.getElementById('quarto').classList.toggle('show');
+	}
+	
+	function showQuinto() {
+		document.getElementById('quinto').classList.toggle('show');
+	}
+	
+	function showSexto() {
+		document.getElementById('sexto').classList.toggle('show');
+	}
+	
+	function showSetimo() {
+		document.getElementById('setimo').classList.toggle('show');
+	}
+	</script>
+	   
+	
+	Diagramas HTML
+	
+	
+	<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #246db6;">
+	
+	
+							<p>
+								TÓPICO 1
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #3a5ba9;">
+	
+							<p>
+								Comportamento Humano e Motivação
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #ee2e6a;">
+	
+	
+							<p>
+								TÓPICO 2
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #db1c4e;">
+	
+							<p>
+								Teorias Motivacionais Aplicadas ao Trabalho
+							</p>
+	
+						</div>
+	
+	
+	
+					</div>
+	
+	
+					<div class="diagrama">
+	
+						<div class="titulo" style="background-color: #f7a31b;">
+	
+	
+							<p>
+								TÓPICO 3
+							</p>
+	
+	
+						</div>
+	
+	
+	
+						<div class="conteudo" style="background-color: #f26821;">
+	
+							<p>
+								Cultura e Clima Organizacional e suas Influências na Motivação e no Comportamento
+							</p>
+	
+						</div>
+	
+	
+					</div>
+	
+	
+	*/
+    </style>
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">638000.000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Gabriel Roda</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010053A5CDB753ED6B4E836F94BDD90BC492</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MP748JT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="accessibility-menu">
+      <div
+        id="accessibility-toggle"
+        class="accessibility-item"
+        onclick="toggleAccess()"
+        title="Acessibilidade"
+      >
+        <i class="material-icons">accessibility</i>
+      </div>
+      <div
+        id="accessibility-decrease"
+        class="accessibility-item"
+        onclick="decreaseFont()"
+        title="Diminuir a Fonte"
+      >
+        <i class="material-icons">text_fields</i>
+      </div>
+      <div
+        id="accessibility-reset"
+        class="accessibility-item"
+        onclick="resetFont()"
+        title="Redefinir a Fonte"
+      >
+        <i class="material-icons">title</i>
+      </div>
+      <div
+        id="accessibility-increase"
+        class="accessibility-item"
+        onclick="increaseFont()"
+        title="Aumentar a Fonte"
+      >
+        <i class="material-icons">format_size</i>
+      </div>
+    </div>
+
+    <div id="material-menu" class="hidden">
+      <a
+        id="material-menu-livro"
+        class="menu-side-item"
+        title="Livro da Disciplina"
+        target="_blank"
+        href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/livro/livro.php?codigo=289838"
+      >
+        <img src="../img/ico/livro.svg" alt="Ícone Livro" />
+      </a>
+      <a
+        id="material-menu-gabarito"
+        class="menu-side-item"
+        title="Gabarito"
+        href="https://www.uniasselvi.com.br/extranet/layout/request/trilha/materiais/gabarito/gabarito.php?codigo=289838"
+        target="_blank"
+      >
+        <img src="../img/ico/gabarito.svg" alt="Ícone Gabarito" />
+      </a>
+      <a
+        id="material-menu-videos"
+        class="menu-side-item"
+        title="Vídeos da Disciplina"
+        href="videos.html"
+      >
+        <img src="../img/ico/video.svg" alt="Ícone Vídeo" />
+      </a>
+      <a
+        id="material-menu-objetos"
+        class="menu-side-item"
+        title="Objetos de Aprendizagem"
+        href="objetos.html"
+      >
+        <img src="../img/ico/objeto.svg" alt="Ícone Objeto" />
+      </a>
+      <div
+        id="material-menu-toggle"
+        class="flex-c clickable"
+        onclick="toggleMaterial()"
+      >
+        <i class="material-icons">expand_more</i>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="top-menu-toggle flex-c" onclick="toggleMenu()">
+        <i class="material-icons">menu</i>
+      </div>
+      <div id="topbar">
+        <div class="top-uniwrapper">
+          <a
+            id="topbar-apresentacao"
+            class="top-unidade"
+            href="apresentacao.html"
+          >
+            <div class="top-antes"></div>
+            <span>Apresentação</span>
+            <div class="top-depois"></div>
+          </a>
+          <a id="topbar-u1" class="top-unidade selected">
+            <div class="top-antes"></div>
+            <span>Unidade 1</span>
+            <div class="top-depois"></div>
+          </a>
+          <a id="topbar-u2" class="top-unidade" href="unidade2.html">
+            <div class="top-antes"></div>
+            <span>Unidade 2</span>
+            <div class="top-depois"></div>
+          </a>
+          <a id="topbar-u3" class="top-unidade" href="unidade3.html">
+            <div class="top-antes"></div>
+            <span>Unidade 3</span>
+            <div class="top-depois"></div>
+          </a>
+        </div>
+        <div class="topbar-progress"></div>
+      </div>
+
+      <div id="sidebar">
+        <div class="wrapper">
+          <div class="sidebar-logo">
+            <img src="../img/favicon.png" alt="Logo Uniasselvi" />
+          </div>
+
+          <!-- <div class="sidebar-group">
+                    <div id="main-menu-inicio" class="sidebar-item" onclick="redirect('inicio')">
+                        <span>Início</span>
+                    </div>
+                </div> -->
+
+          <div class="sidebar-group">
+            <div class="sidebar-title">Minha Trilha</div>
+            <div
+              id="main-menu-apresentacao"
+              class="sidebar-item"
+              onclick="redirect('apresentacao')"
+            >
+              Apresentação
+            </div>
+            <div
+              id="main-menu-u1"
+              class="sidebar-item selected"
+              onclick="redirect('unidade1')"
+            >
+              <span>Unidade 1</span>
+              <div class="sidebar-progress"></div>
+            </div>
+            <div
+              id="main-menu-u2"
+              class="sidebar-item"
+              onclick="redirect('unidade2')"
+            >
+              <span>Unidade 2</span>
+            </div>
+            <div
+              id="main-menu-u3"
+              class="sidebar-item"
+              onclick="redirect('unidade3')"
+            >
+              Unidade 3
+            </div>
+          </div>
+
+          <div class="sidebar-group">
+            <div class="sidebar-title">Conteúdo Didático</div>
+            <div
+              id="main-menu-livro"
+              class="sidebar-item"
+              onclick="document.querySelector('#material-menu-livro').click()"
+            >
+              Livro Didático
+            </div>
+            <div
+              id="main-menu-videos"
+              class="sidebar-item"
+              onclick="redirect('videos')"
+            >
+              Vídeos da Disciplina
+            </div>
+            <div
+              id="main-menu-objetos"
+              class="sidebar-item"
+              onclick="redirect('objetos')"
+            >
+              Objetos de Aprendizagem
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-page">
+        <div class="wrapper">
+          <div class="title-big flex-c text-white bg2"></div>
+
+          <div class="spacer-40"></div>
+
+          <div class="content-section flex-c column">
+            <h1 class="subheader text-center">
+              ELABORAÇÃO, GESTÃO DE DOCUMENTOS E INFORMAÇÃO
+            </h1>
+            <h2 class="header header-gradient text-center"> Unidade 1 </h2>
+
+            <div class="content-text">
+              <p>
+                Iniciaremos os estudos sobre a disciplina de Gestão de Planilhas
+                e Documentos e, na primeira unidade, estudaremos a elaboração,
+                gestão de documentos e informação.
+              </p>
+
+              <p>
+                A ideia é fazer com que você entenda que uma gestão eficiente e
+                eficaz de documentos e informação envolve gerir a documentação
+                corporativa, visando a ordenação, preservação e integridade das
+                informações e dos documentos, objetivando o aprimoramento dos
+                processos de uma empresa.
+              </p>
+
+              <div class="dica-leitura">
+                <img
+                  src="../img/ico/leia_mais_outline.svg"
+                  alt="Dica de Leitura"
+                />
+
+                <p class="titulo-filled"
+                  ><b
+                    >A partir do estudo desta unidade, você será capaz de:</b
+                  ></p
+                >
+
+                <ul class="arrowlist">
+                  <li
+                    >Refletir sobre a importância da elaboração e da gestão de
+                    documentos na sua rotina de trabalho;</li
+                  >
+                  <li>
+                    Compreender a relação entre a documentação empresarial e a
+                    informação para o bom andamento de uma empresa;
+                  </li>
+                  <li
+                    >Conhecer exemplos práticos de meios e planos de comunicação
+                    empresarial;</li
+                  >
+                  <li
+                    >Analisar os benefícios de uma gestão documental para
+                    aplicá-la no seu dia a dia.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex-content">
+                <img src="./img/img8.jpg" class="nova-img" alt="" />
+              </div>
+
+              <div class="flex-content">
+                <p style="margin-top: 0"
+                  ><b>Fonte</b>:
+                  <a
+                    href="https://br.freepik.com/vetores-gratis/icone-do-documento-flat_1537583.htm#query=gest%C3%A3o%20de%20documentos&position=2&from_view=search"
+                    class="humanas"
+                    target="_blank"
+                    >Disponível aqui</a
+                  ></p
+                >
+              </div>
+
+              <br />
+
+              <p class="titulo-destaque">Era da informação</p>
+
+              <p>
+                Vivenciamos a chamada Era da Informação, que tem como atributo
+                principal a valorização do conhecimento concentrado nas pessoas
+                e nas organizações. E com o acúmulo de conhecimento e
+                informações, numerosos e diversificados documentos são
+                produzidos, sejam por instituições públicas ou privadas.
+              </p>
+
+              <p>
+                Dessa forma, saber gerir, controlar e arquivar essa imensurável
+                quantidade de documentos de maneira eficiente constitui-se uma
+                grande vantagem competitiva para as organizações, especialmente
+                diante da adoção de tecnologias digitais na concepção de
+                documentos, que em oposição ao que se pensa, necessitam dos
+                mesmos cuidados e atenção que os documentos físicos
+                tradicionais.
+              </p>
+
+              <p>
+                Os documentos físicos, conforme conhecemos na atualidade,
+                tiveram origem nos antigos manuscritos, e, com o passar do
+                tempo, transformaram-se, até chegarem às configurações e aos
+                padrões atuais: o formato digital. O advento dos arquivos
+                aconteceu concomitantemente ao aparecimento da escrita e, por
+                conseguinte, à elaboração dos documentos.
+              </p>
+
+              <p>
+                A datar do século XX, devido ao extenso volume de documentos
+                confeccionados, o gerenciamento da informação e documentação foi
+                otimizado em função do desenvolvimento das esferas pública e
+                privada, expandindo a necessidade do gerenciamento dos arquivos
+                de forma efetiva.
+              </p>
+
+              <p>
+                É com base na gestão de documentos que se pode realizar um
+                adequado arquivamento. Em vista disso, o conhecimento sobre essa
+                temática é imprescindível.
+              </p>
+
+              <p>
+                Um bom controle de documentos auxilia a adaptação de processos e
+                normas institucionais, o aumento da segurança, a confiabilidade
+                e a qualidade da informação da organização.
+              </p>
+
+              <br />
+
+              <p class="titulo-destaque">Gestão de documentos</p>
+
+              <p>
+                Segundo a Lei n. 8.159, de 8 de janeiro de 1991, em seu Art. 3º
+                (BRASIL, 1991), <b> gestão de documentos </b> é o “conjunto de
+                procedimentos e operações técnicas referentes à sua produção,
+                tramitação, uso, avaliação e arquivamento em fase corrente ou
+                intermediária, visando a sua eliminação ou recolhimento para
+                guarda permanente” de documentos de uma organização.
+              </p>
+
+              <div class="flex-content">
+                <img
+                  src="./img/img1.jpg"
+                  class="nova-img"
+                  style="width: 70%"
+                  alt=""
+                />
+              </div>
+
+              <div class="flex-content">
+                <p style="margin-top: 0"
+                  ><b>Fonte</b>:
+                  <a
+                    href="https://br.freepik.com/vetores-gratis/pagina-de-destino-isometrica-de-gerenciamento-de-documentos-eletronicos_13924275.htm#query=gest%C3%A3o%20docs&position=1&from_view=search"
+                    class="humanas"
+                    target="_blank"
+                    >Disponível aqui</a
+                  ></p
+                >
+              </div>
+
+              <p>
+                Dessa forma, podemos dizer que o conceito de gestão da
+                documentação envolve gerir a documentação corporativa, visando a
+                ordenação, preservação e integridade das informações e dos
+                documentos, objetivando o aprimoramento dos processos de uma
+                empresa (TARAPANOFF, 2015).
+              </p>
+
+              <p>
+                Envolve, ainda, gerenciar o ciclo de vida da informação e
+                documentação, propiciando a segurança e a disseminação da
+                informação, e possibilitando o acesso de forma transparente,
+                precisa e com qualidade.
+              </p>
+
+              <br />
+
+              <p class="titulo-destaque"
+                >Importância da gestão de documentos para as organizações</p
+              >
+
+              <p>
+                As organizações públicas ou privadas produzem cotidianamente uma
+                grande massa de documentos, que, em seguida, transformam-se em
+                arquivos, mas que contêm numerosas e importantes informações que
+                precisam ser ordenadas e armazenadas de forma segura.
+              </p>
+
+              <p>
+                As informações geradas pelas empresas são consideradas
+                atualmente como um valoroso ativo organizacional, que propicia
+                diferencial competitivo.
+              </p>
+
+              <div class="flex-content">
+                <img
+                  src="./img/img9.jpg"
+                  class="nova-img"
+                  style="margin-bottom: 0"
+                  alt=""
+                />
+              </div>
+
+              <div class="flex-content">
+                <p
+                  ><b>Fonte</b>:
+                  <a
+                    href="https://br.freepik.com/vetores-gratis/pagina-de-destino-isometrica-de-gerenciamento-de-documentos-eletronicos_13924275.htm#query=gest%C3%A3o%20docs&position=1&from_view=search"
+                    class="humanas"
+                    target="_blank"
+                    >Disponível aqui</a
+                  ></p
+                >
+              </div>
+
+              <p>
+                Assim sendo, percebemos que toda e qualquer organização precisa
+                controlar de forma segura todo o conteúdo produzido, uma vez que
+                o descaso ou descuido com esse bem intangível, mas de alto valor
+                agregado para as instituições, pode ocasionar um prejuízo
+                imensurável.
+              </p>
+
+              <p>
+                Diante disso, a instauração da gestão de documentos é
+                imprescindível nas organizações que almejam se destacar e
+                desenvolver, expandindo seus negócios, uma vez que a empresa que
+                possui um controle ideal sobre a documentação de forma
+                organizada proporciona agilidade nos processos e ganhos
+                institucionais.
+              </p>
+
+              <div class="video-c flex-c column">
+                <img
+                  src="../img/ico/video_c_outline.svg"
+                  alt="Video Complementar"
+                />
+                <p
+                  ><b
+                    >Para além da leitura do material do livro didático,
+                    deixamos como dica o vídeo a seguir. Acesse o link:</b
+                  ></p
+                >
+                <div class="video">
+                  <div class="video-large">
+                    <iframe
+                      class="lazyload"
+                      title="Vídeo da Disciplina"
+                      width="1280"
+                      height="720"
+                      data-src="https://www.youtube.com/embed/cpTFyhRShWQ?rel=0&amp;showinfo=0&amp;disablekb=1&amp;modestbranding=1&amp;allowfullscreen=1"
+                      allowfullscreen="true"
+                    >
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+
+              <iframe
+                width="100%"
+                height="166"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1293585493&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              ></iframe>
+              <div
+                style="
+                  font-size: 10px;
+                  color: #cccccc;
+                  line-break: anywhere;
+                  word-break: normal;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  font-family:
+                    Interstate,
+                    Lucida Grande,
+                    Lucida Sans Unicode,
+                    Lucida Sans,
+                    Garuda,
+                    Verdana,
+                    Tahoma,
+                    sans-serif;
+                  font-weight: 100;
+                "
+              >
+                <a
+                  href="https://soundcloud.com/uniasselvi"
+                  title="EdTech NEAD"
+                  target="_blank"
+                  style="color: #cccccc; text-decoration: none"
+                  >EdTech NEAD</a
+                >
+                ·
+                <a
+                  href="https://soundcloud.com/uniasselvi/gestao-planilhas-documentos-unidade-1"
+                  title="Gestão Planilhas Documentos - Unidade 1"
+                  target="_blank"
+                  style="color: #cccccc; text-decoration: none"
+                  >Gestão Planilhas Documentos - Unidade 1</a
+                >
+              </div>
+
+              <p
+                >No livro
+                <i
+                  >Ampliando a discussão em torno de documentos audiovisuais,
+                  iconográficos, sonoros e musicais</i
+                >, os autores reúnem elementos históricos e conceituais ao
+                conhecimento que se produz no âmbito da arquivologia e da
+                produção documental no campo da música, além de apresentar
+                mapeamentos e resultados de investigações empíricas sobre
+                pesquisas e publicações acadêmicas relativas a temas que
+                caracterizam o cotidiano da Câmara Técnica de Documentos
+                Audiovisuais, Iconográficos e Sonoros (CTDAIS), do Conselho
+                Nacional de Arquivos (CONARQ).</p
+              >
+
+              <br />
+
+              <p><b>Referência</b></p>
+              <p
+                >Pablo Sotuyo Blanco; Marcelo Nogueira de Siqueira e Thiago de
+                Oliveira Vieira (org.). Ampliando a discussão em torno de
+                documentos audiovisuais, iconográficos, sonoros e musicais.
+                Salvador: EDUFBA. 2016. ISBN: 9788523215262</p
+              >
+
+
+              <div class="folha">
+              
+
+                <p class="titulo-pratica">ATIVIDADE PRÁTICA UNIDADE 1</p>
+
+                <p>
+                  No mundo contemporâneo, a dinâmica que rege as informações é
+                  multifacetada: velocidade, tempo e espaço. Somos bombardeados
+                  com todo tipo de notícia, das mais variadas fontes e,
+                  naturalmente, desenvolvemos um senso de seleção para que seja
+                  possível processar toda a informação a qual temos acesso,
+                  selecionando por meio de critérios pessoais de relevância e
+                  confiabilidade o que realmente nos interessa.
+                </p>
+
+                <p>
+                  Estando postos os elementos conceituais básicos, é possível
+                  compreender o fluxo que ocorre dentro do processo de gestão de
+                  documentos. Como explicitado no conceito técnico, as
+                  atividades de gestão são realizadas com documentos correntes e
+                  intermediários e abarcam todas as fases de trâmite, desde a
+                  produção ou recepção até o descarte ou recolhimento.
+                </p>
+
+                <p>
+                  Por ter como objetivo principal a eficiência no manuseio de
+                  documentos, a gestão deve seguir um fluxo predeterminado, cujo
+                  objetivo é filtrar e otimizar as fases seguintes, sempre
+                  primando pela acessibilidade dos documentos correntes, a fim
+                  de que as atividades administrativas, legais ou fiscais que
+                  demandam seu uso sejam realizadas sem maiores obstáculos. Além
+                  do objetivo principal, é possível elencar três objetivos
+                  acessórios, que norteiam a gestão documental: acessibilidade,
+                  descarte com segurança e rigor na conservação de documentos
+                  permanentes.
+                </p>
+
+                <p
+                  ><b
+                    >Considerando esse contexto, descreva as vantagens de ter um
+                    controle documental.</b
+                  >
+                </p>
+              </div>
+
+              <br>
+
+              <p>Confira o vídeo a seguir, onde abordamos a Elaboração e Gestão de Documentos e Informação: </p>
+
+            </div>
+            
+              <div class="video">
+                <div class="video-large">
+                  <iframe class="lazyload" title="Vídeo da Disciplina" width="1280" height="720"
+                    data-src="https://www.youtube.com/embed/P2yJJRk4wzI?rel=0&amp;showinfo=0&amp;disablekb=1&amp;modestbranding=1&amp;allowfullscreen=1"
+                    allowfullscreen="true">
+                  </iframe>
+                </div>
+              </div>
+            
+            <div class="content-text">
+            </div>
+
+            <!-- Final do conteúdo -->
+            <br />
+            <div class="subheader">BONS ESTUDOS!</div>
+            <br />
+
+            <div class="button-group">
+              <div class="button-wrapper flex-c" title="Ir para Apresentação">
+                <a id="nav-prev" class="button-next" href="apresentacao.html">
+                  <i class="material-icons large">chevron_left</i>
+                  &emsp;Apresentação</a
+                >
+              </div>
+
+              <div class="button-wrapper flex-c" title="Voltar ao Topo">
+                <div id="nav-top" class="button-top" onclick="sctop()">
+                  <i class="material-icons large">expand_less</i>
+                </div>
+              </div>
+
+              <div class="button-wrapper flex-c" title="Ir para Unidade 2">
+                <a id="nav-next" class="button-next" href="unidade2.html">
+                  Unidade 2&emsp;<i class="material-icons large"
+                    >chevron_right</i
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+
+          <div class="content-footer v22-1">
+            <div class="footer-marca">
+              <img src="../img/favicon.png" alt="" />
+              <span class="footer-marca-texto"
+                >UNIASSELVI © Todos os direitos reservados.</span
+              >
+            </div>
+            <div class="footer-links">
+              <a href="https://portal.uniasselvi.com.br/" target="_blank">
+                <img src="../img/favicon.png" alt="" />
+                Acesse o Portal UNIASSELVI</a
+              >
+              <a href="https://ava2.uniasselvi.com.br/">
+                <img src="../img/texto_gio.svg" alt="" />
+
+                Ir para o AVA</a
+              >
+            </div>
+          </div>
+          <!-- 3/div -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* Defer font loading */
+      var giftofspeed = document.createElement('link')
+      giftofspeed.rel = 'stylesheet'
+      giftofspeed.href =
+        'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
+      var godefer = document.getElementsByTagName('link')[0]
+      godefer.parentNode.insertBefore(giftofspeed, godefer)
+    </script>
+  </body>
+</html>
